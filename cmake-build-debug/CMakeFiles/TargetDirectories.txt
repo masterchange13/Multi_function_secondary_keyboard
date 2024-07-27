@@ -1,0 +1,3 @@
+D:/MicroController/Arduino/ardiuno/Multi_function_secondary_keyboard/cmake-build-debug/CMakeFiles/Multi_function_secondary_keyboard.dir
+D:/MicroController/Arduino/ardiuno/Multi_function_secondary_keyboard/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/MicroController/Arduino/ardiuno/Multi_function_secondary_keyboard/cmake-build-debug/CMakeFiles/rebuild_cache.dir
