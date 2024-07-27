@@ -100,6 +100,9 @@ const uint8_t KEY_NUM_PLUS = 0xDF;
 const uint8_t KEY_NUM_ENTER = 0xE0;
 const uint8_t KEY_NUM_PERIOD = 0xEB;
 
+// 自己定义
+const uint8_t KEY_SPACE = 0x20;
+
 typedef uint8_t MediaKeyReport[2];
 
 const MediaKeyReport KEY_MEDIA_NEXT_TRACK = {1, 0};

@@ -1,4 +1,5 @@
 #include "src/BleKeyboard/BleKeyboard.h"
+#include"src/KeyMap/keyMap.h"
 
 BleKeyboard bleKeyboard("masterchange's Multi-function secondary keyboard", "Espressif", 50);
 
@@ -6,13 +7,14 @@ BleKeyboard bleKeyboard("masterchange's Multi-function secondary keyboard", "Esp
 const int rows[] = {32, 2, 3, 4};
 const int cols[] = {33, 6, 17, 18};
 
+
 // 定义按键映射
-const uint8_t keymap[4][4] = {
-        {KEY_NUM_0, KEY_F1, KEY_F2, KEY_F3},
-        {KEY_F4, KEY_F5, KEY_F6, KEY_F7},
-        {KEY_F8, KEY_F9, KEY_F10, KEY_F11},
-        {KEY_F12, KEY_F1, KEY_F1, KEY_F1}
-};
+//const uint8_t keymap[4][4] = {
+//        {KEY_NUM_0, KEY_F1, KEY_F2, KEY_F3},
+//        {KEY_F4, KEY_F5, KEY_F6, KEY_F7},
+//        {KEY_F8, KEY_F9, KEY_F10, KEY_F11},
+//        {KEY_F12, KEY_F1, KEY_F1, KEY_F1}
+//};
 
 short col_size = 4;
 short row_size = 4;
@@ -44,27 +46,70 @@ void loop() {
         return;
     }
 
-    Serial.println("i am running");
     // 扫描矩阵键盘
     for (int col = 0; col < col_size; col++) {
         digitalWrite(cols[col], LOW); // 将当前列设置为低电平
 
         for (int row = 0; row < row_size; row++) {
             if (digitalRead(rows[row]) == LOW) { // 检测按键按下
-                Serial.print("Key pressed: ");
-                Serial.println(keymap[row][col]); // 打印按键值
-                bleKeyboard.press(keymap[row][col]);
-                delay(20); // 简单去抖动处理
-                while (digitalRead(rows[row]) == LOW); // 等待按键释放
-                bleKeyboard.release(keymap[row][col]);
-                Serial.print("Key released: ");
-                Serial.println(keymap[row][col]); // 打印按键释放
+                functionKey(bleKeyboard, row, col);
                 delay(20); // 简单去抖动处理
             }
         }
-
         digitalWrite(cols[col], HIGH); // 恢复当前列的高电平
     }
 
     delay(100); // 合理的扫描间隔
+}
+
+void functionKey(BleKeyboard bleKeyboard, int row, int col) {
+
+    Serial.print("Key pressed: ");
+    if (row == 0) {
+        if (col == 0) {
+            keyMap11(bleKeyboard);
+        } else if (col == 1) {
+            keyMap12(bleKeyboard);
+        } else if (col == 2) {
+            keyMap13(bleKeyboard);
+        } else if (col == 3) {
+            keyMap14(bleKeyboard);
+        }
+    }
+
+    else if (row == 1) {
+        if (col == 0) {
+            keyMap21(bleKeyboard);
+        } else if (col == 1) {
+            keyMap22(bleKeyboard);
+        } else if (col == 2) {
+            keyMap23(bleKeyboard);
+        } else if (col == 3) {
+            keyMap24(bleKeyboard);
+        }
+    }
+
+    else if (row == 2) {
+        if (col == 0) {
+            keyMap31(bleKeyboard);
+        } else if (col == 1) {
+            keyMap32(bleKeyboard);
+        } else if (col == 2) {
+            keyMap33(bleKeyboard);
+        } else if (col == 3) {
+            keyMap34(bleKeyboard);
+        }
+    }
+
+    else if (row == 3) {
+        if (col == 0) {
+            keyMap41(bleKeyboard);
+        } else if (col == 1) {
+            keyMap42(bleKeyboard);
+        } else if (col == 2){
+            keyMap43(bleKeyboard);
+        } else if (col == 3) {
+            keyMap44(bleKeyboard);
+        }
+    }
 }
