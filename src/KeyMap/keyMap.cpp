@@ -52,8 +52,17 @@ void keyMap14(BleKeyboard bleKeyboard)
 
 }
 
-// 打开/关闭音乐
+// 打开media
 void keyMap21(BleKeyboard bleKeyboard)
+{
+    bleKeyboard.press(KEY_MEDIA_CONSUMER_CONTROL_CONFIGURATION);
+    delay(20);
+    bleKeyboard.release(KEY_MEDIA_CONSUMER_CONTROL_CONFIGURATION);
+    delay(20);
+}
+
+// 打开/关闭音乐
+void keyMap22(BleKeyboard bleKeyboard)
 {
     bleKeyboard.press(KEY_MEDIA_PLAY_PAUSE);
     delay(20);
@@ -61,14 +70,13 @@ void keyMap21(BleKeyboard bleKeyboard)
     delay(20);
 }
 
-void keyMap22(BleKeyboard bleKeyboard)
-{
-
-}
-
+// 截屏
 void keyMap23(BleKeyboard bleKeyboard)
 {
-
+    bleKeyboard.press(KEY_PRTSC);
+    delay(20);
+    bleKeyboard.release(KEY_PRTSC);
+    delay(20);
 }
 
 void keyMap24(BleKeyboard bleKeyboard)
