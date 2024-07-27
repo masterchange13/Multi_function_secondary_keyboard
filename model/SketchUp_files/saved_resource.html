@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<!-- saved from url=(0087)https://embed-3dwarehouse.sketchup.com/?cacheBust=1722073890762&sessionId=1722073740579 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="description" content="3D Warehouse is a website of searchable, pre-made 3D models that works seamlessly with SketchUp.">
+    <link rel="icon" href="https://embed-3dwarehouse.sketchup.com/favicon.ico">
+    <!-- TODO: figure out how to programatically load these otherwise we're getting errors -->
+    <!-- <link rel="preload" href="/images/hero-img.webp" as="image" />
+    <link rel="preload" href="/images/hero-img-dark.webp" as="image" /> -->
+    <link rel="preload" href="https://embed-3dwarehouse.sketchup.com/assets/open-sans-300-CH0tTALE.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="https://embed-3dwarehouse.sketchup.com/assets/open-sans-regular-795kxNcv.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="https://embed-3dwarehouse.sketchup.com/assets/open-sans-italic-V2N-v-0n.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="https://embed-3dwarehouse.sketchup.com/assets/open-sans-600-D-OfaXiT.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="https://embed-3dwarehouse.sketchup.com/assets/open-sans-700-normal-228e563b3-BIGoPpRJ.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="https://embed-3dwarehouse.sketchup.com/assets/open-sans-700-italic-7b3897ce8-B4ZBaTpu.woff2" as="font" type="font/woff2" crossorigin="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Warehouse</title>
+    <style>
+      @keyframes app-loading-spinner {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+    <style>
+      .hide-spinner {
+        display: none;
+      }
+
+      .show-spinner {
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .animation {
+        height: 33vh;
+        width: 28.6vh;
+        animation: app-loading-spinner 6s linear infinite;
+      }
+    </style>
+    <script type="text/javascript" async="" src="./6si.min.js.下载"></script><script type="text/javascript" async="" src="./analytics.js.下载"></script><script type="text/javascript" async="" src="./js"></script><script type="text/javascript" async="" src="./js(1)"></script><script>
+      if (window.location.pathname === '/index.html') {
+        // The client may be trying to reach /index.html, which doesn't exist.  Keep any query params intact.
+        let redirect = window.location.href.replace('/index.html', '/');
+        window.location.href = redirect;
+      }
+    </script>
+    <script>
+      const LAST_DEPRECATED_VERSION = 21;
+      if (isSketchupClient(navigator.userAgent)) {
+        const clientVersion = parseSketchUpVersion(navigator.userAgent);
+        if (clientVersion.major <= LAST_DEPRECATED_VERSION) {
+          const redirect = window.location.origin + '/deprecated-client';
+          window.location.href = redirect;
+        }
+      }
+
+      function isSketchupClient(userAgent) {
+        let agent = userAgent.toLowerCase();
+        return agent.indexOf('sketchup') >= 0 && !(agent.indexOf('mxr mobile sketchup') >= 0);
+      }
+
+      function parseSketchUpVersion(userAgent) {
+        let version = {
+          major: undefined,
+          minor: undefined,
+        };
+
+        // Before 2017, the version string looked like 'SketchUp/14.0'. 2017 and
+        // later use 'SketchUp Pro/17.0' on Windows. We added a 'Pro' or 'Make'
+        // string after SketchUp. NOTE: The Mac might use the old or the new
+        // style.
+        let pattern = /SketchUp (Pro|Make)\/\d+\.\d+/i;
+        let matches = userAgent.match(pattern);
+
+        if (!matches || matches.length === 0) {
+          pattern = /SketchUp\/\d+\.\d+/i;
+          matches = userAgent.match(pattern);
+        }
+        if (matches && matches.length > 0) {
+          const suString = matches[0];
+          const versionString = suString.substring(suString.indexOf('/') + 1);
+          const versionParts = versionString.split('.');
+          let value = parseInt(versionParts[0], 10);
+          version.major = isNaN(value) ? undefined : value;
+          value = parseInt(versionParts[1], 10);
+          version.minor = isNaN(value) ? undefined : value;
+        }
+
+        return version;
+      }
+    </script>
+    <script type="module" crossorigin="" src="./index-10QTOH6a.js.下载"></script>
+    <link rel="modulepreload" crossorigin="" href="https://embed-3dwarehouse.sketchup.com/assets/group-home-DE-jIUaJ.js">
+    <link rel="stylesheet" crossorigin="" href="./group-home-CkRzCdex.css">
+    <link rel="stylesheet" crossorigin="" href="./index-BHF66du2.css">
+  <style type="text/css">
+.p-icon {
+    display: inline-block;
+}
+.p-icon-spin {
+    -webkit-animation: p-icon-spin 2s infinite linear;
+    animation: p-icon-spin 2s infinite linear;
+}
+@-webkit-keyframes p-icon-spin {
+0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+}
+100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+}
+}
+@keyframes p-icon-spin {
+0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+}
+100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+}
+}
+</style><style type="text/css">
+.p-dialog-mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+.p-dialog-mask.p-component-overlay {
+    pointer-events: auto;
+}
+.p-dialog {
+    display: flex;
+    flex-direction: column;
+    pointer-events: auto;
+    max-height: 90%;
+    transform: scale(1);
+}
+.p-dialog-content {
+    overflow-y: auto;
+}
+.p-dialog-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+}
+.p-dialog-footer {
+    flex-shrink: 0;
+}
+.p-dialog .p-dialog-header-icons {
+    display: flex;
+    align-items: center;
+}
+.p-dialog .p-dialog-header-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Fluid */
+.p-fluid .p-dialog-footer .p-button {
+    width: auto;
+}
+
+/* Animation */
+/* Center */
+.p-dialog-enter-active {
+    transition: all 150ms cubic-bezier(0, 0, 0.2, 1);
+}
+.p-dialog-leave-active {
+    transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.p-dialog-enter-from,
+.p-dialog-leave-to {
+    opacity: 0;
+    transform: scale(0.7);
+}
+
+/* Top, Bottom, Left, Right, Top* and Bottom* */
+.p-dialog-top .p-dialog,
+.p-dialog-bottom .p-dialog,
+.p-dialog-left .p-dialog,
+.p-dialog-right .p-dialog,
+.p-dialog-topleft .p-dialog,
+.p-dialog-topright .p-dialog,
+.p-dialog-bottomleft .p-dialog,
+.p-dialog-bottomright .p-dialog {
+    margin: 0.75rem;
+    transform: translate3d(0px, 0px, 0px);
+}
+.p-dialog-top .p-dialog-enter-active,
+.p-dialog-top .p-dialog-leave-active,
+.p-dialog-bottom .p-dialog-enter-active,
+.p-dialog-bottom .p-dialog-leave-active,
+.p-dialog-left .p-dialog-enter-active,
+.p-dialog-left .p-dialog-leave-active,
+.p-dialog-right .p-dialog-enter-active,
+.p-dialog-right .p-dialog-leave-active,
+.p-dialog-topleft .p-dialog-enter-active,
+.p-dialog-topleft .p-dialog-leave-active,
+.p-dialog-topright .p-dialog-enter-active,
+.p-dialog-topright .p-dialog-leave-active,
+.p-dialog-bottomleft .p-dialog-enter-active,
+.p-dialog-bottomleft .p-dialog-leave-active,
+.p-dialog-bottomright .p-dialog-enter-active,
+.p-dialog-bottomright .p-dialog-leave-active {
+    transition: all 0.3s ease-out;
+}
+.p-dialog-top .p-dialog-enter-from,
+.p-dialog-top .p-dialog-leave-to {
+    transform: translate3d(0px, -100%, 0px);
+}
+.p-dialog-bottom .p-dialog-enter-from,
+.p-dialog-bottom .p-dialog-leave-to {
+    transform: translate3d(0px, 100%, 0px);
+}
+.p-dialog-left .p-dialog-enter-from,
+.p-dialog-left .p-dialog-leave-to,
+.p-dialog-topleft .p-dialog-enter-from,
+.p-dialog-topleft .p-dialog-leave-to,
+.p-dialog-bottomleft .p-dialog-enter-from,
+.p-dialog-bottomleft .p-dialog-leave-to {
+    transform: translate3d(-100%, 0px, 0px);
+}
+.p-dialog-right .p-dialog-enter-from,
+.p-dialog-right .p-dialog-leave-to,
+.p-dialog-topright .p-dialog-enter-from,
+.p-dialog-topright .p-dialog-leave-to,
+.p-dialog-bottomright .p-dialog-enter-from,
+.p-dialog-bottomright .p-dialog-leave-to {
+    transform: translate3d(100%, 0px, 0px);
+}
+
+/* Maximize */
+.p-dialog-maximized {
+    -webkit-transition: none;
+    transition: none;
+    transform: none;
+    width: 100vw !important;
+    height: 100vh !important;
+    top: 0px !important;
+    left: 0px !important;
+    max-height: 100%;
+    height: 100%;
+}
+.p-dialog-maximized .p-dialog-content {
+    flex-grow: 1;
+}
+
+/* Position */
+.p-dialog-left {
+    justify-content: flex-start;
+}
+.p-dialog-right {
+    justify-content: flex-end;
+}
+.p-dialog-top {
+    align-items: flex-start;
+}
+.p-dialog-topleft {
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.p-dialog-topright {
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+.p-dialog-bottom {
+    align-items: flex-end;
+}
+.p-dialog-bottomleft {
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+.p-dialog-bottomright {
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.p-confirm-dialog .p-dialog-content {
+    display: flex;
+    align-items: center;
+}
+</style><style type="text/css">
+.p-virtualscroller {
+    position: relative;
+    overflow: auto;
+    contain: strict;
+    transform: translateZ(0);
+    will-change: scroll-position;
+    outline: 0 none;
+}
+.p-virtualscroller-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* contain: content; */
+    min-height: 100%;
+    min-width: 100%;
+    will-change: transform;
+}
+.p-virtualscroller-spacer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1px;
+    width: 1px;
+    transform-origin: 0 0;
+    pointer-events: none;
+}
+.p-virtualscroller .p-virtualscroller-loader {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.p-virtualscroller-loader.p-component-overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.p-virtualscroller-loading-icon {
+    font-size: 2rem;
+}
+.p-virtualscroller-loading-icon.p-icon {
+    width: 2rem;
+    height: 2rem;
+}
+.p-virtualscroller-horizontal > .p-virtualscroller-content {
+    display: flex;
+}
+
+/* Inline */
+.p-virtualscroller-inline .p-virtualscroller-content {
+    position: static;
+}
+</style><style type="text/css">
+.p-dropdown {
+    display: inline-flex;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+}
+.p-dropdown-clear-icon {
+    position: absolute;
+    top: 50%;
+    margin-top: -0.5rem;
+}
+.p-dropdown-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.p-dropdown-label {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    flex: 1 1 auto;
+    width: 1%;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+.p-dropdown-label-empty {
+    overflow: hidden;
+    opacity: 0;
+}
+input.p-dropdown-label {
+    cursor: default;
+}
+.p-dropdown .p-dropdown-panel {
+    min-width: 100%;
+}
+.p-dropdown-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.p-dropdown-items-wrapper {
+    overflow: auto;
+}
+.p-dropdown-item {
+    cursor: pointer;
+    font-weight: normal;
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+}
+.p-dropdown-item-group {
+    cursor: auto;
+}
+.p-dropdown-items {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.p-dropdown-filter {
+    width: 100%;
+}
+.p-dropdown-filter-container {
+    position: relative;
+}
+.p-dropdown-filter-icon {
+    position: absolute;
+    top: 50%;
+    margin-top: -0.5rem;
+}
+.p-fluid .p-dropdown {
+    display: flex;
+}
+.p-fluid .p-dropdown .p-dropdown-label {
+    width: 1%;
+}
+</style><style type="text/css">
+.p-avatar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+}
+.p-avatar.p-avatar-image {
+    background-color: transparent;
+}
+.p-avatar.p-avatar-circle {
+    border-radius: 50%;
+}
+.p-avatar-circle img {
+    border-radius: 50%;
+}
+.p-avatar .p-avatar-icon {
+    font-size: 1rem;
+}
+.p-avatar img {
+    width: 100%;
+    height: 100%;
+}
+</style><style type="text/css">
+.p-overlaypanel {
+    position: absolute;
+    margin-top: 10px;
+    top: 0;
+    left: 0;
+}
+.p-overlaypanel-flipped {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.p-overlaypanel-close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Animation */
+.p-overlaypanel-enter-from {
+    opacity: 0;
+    transform: scaleY(0.8);
+}
+.p-overlaypanel-leave-to {
+    opacity: 0;
+}
+.p-overlaypanel-enter-active {
+    transition: transform 0.12s cubic-bezier(0, 0, 0.2, 1), opacity 0.12s cubic-bezier(0, 0, 0.2, 1);
+}
+.p-overlaypanel-leave-active {
+    transition: opacity 0.1s linear;
+}
+.p-overlaypanel:after,
+.p-overlaypanel:before {
+    bottom: 100%;
+    left: calc(var(--overlayArrowLeft, 0) + 1.25rem);
+    content: ' ';
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+.p-overlaypanel:after {
+    border-width: 8px;
+    margin-left: -8px;
+}
+.p-overlaypanel:before {
+    border-width: 10px;
+    margin-left: -10px;
+}
+.p-overlaypanel-flipped:after,
+.p-overlaypanel-flipped:before {
+    bottom: auto;
+    top: 100%;
+}
+.p-overlaypanel.p-overlaypanel-flipped:after {
+    border-bottom-color: transparent;
+}
+.p-overlaypanel.p-overlaypanel-flipped:before {
+    border-bottom-color: transparent;
+}
+</style><style type="text/css">
+.p-message-wrapper {
+    display: flex;
+    align-items: center;
+}
+.p-message-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.p-message-close.p-link {
+    margin-left: auto;
+    overflow: hidden;
+    position: relative;
+}
+.p-message-enter-from {
+    opacity: 0;
+}
+.p-message-enter-active {
+    transition: opacity 0.3s;
+}
+.p-message.p-message-leave-from {
+    max-height: 1000px;
+}
+.p-message.p-message-leave-to {
+    max-height: 0;
+    opacity: 0;
+    margin: 0 !important;
+}
+.p-message-leave-active {
+    overflow: hidden;
+    transition: max-height 0.3s cubic-bezier(0, 1, 0, 1), opacity 0.3s, margin 0.15s;
+}
+.p-message-leave-active .p-message-close {
+    display: none;
+}
+</style><style type="text/css">
+.p-progressbar {
+    position: relative;
+    overflow: hidden;
+}
+.p-progressbar-determinate .p-progressbar-value {
+    height: 100%;
+    width: 0%;
+    position: absolute;
+    display: none;
+    border: 0 none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.p-progressbar-determinate .p-progressbar-label {
+    display: inline-flex;
+}
+.p-progressbar-determinate .p-progressbar-value-animate {
+    transition: width 1s ease-in-out;
+}
+.p-progressbar-indeterminate .p-progressbar-value::before {
+    content: '';
+    position: absolute;
+    background-color: inherit;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    will-change: left, right;
+    -webkit-animation: p-progressbar-indeterminate-anim 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+    animation: p-progressbar-indeterminate-anim 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+}
+.p-progressbar-indeterminate .p-progressbar-value::after {
+    content: '';
+    position: absolute;
+    background-color: inherit;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    will-change: left, right;
+    -webkit-animation: p-progressbar-indeterminate-anim-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+    animation: p-progressbar-indeterminate-anim-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+    -webkit-animation-delay: 1.15s;
+    animation-delay: 1.15s;
+}
+@-webkit-keyframes p-progressbar-indeterminate-anim {
+0% {
+        left: -35%;
+        right: 100%;
+}
+60% {
+        left: 100%;
+        right: -90%;
+}
+100% {
+        left: 100%;
+        right: -90%;
+}
+}
+@keyframes p-progressbar-indeterminate-anim {
+0% {
+        left: -35%;
+        right: 100%;
+}
+60% {
+        left: 100%;
+        right: -90%;
+}
+100% {
+        left: 100%;
+        right: -90%;
+}
+}
+@-webkit-keyframes p-progressbar-indeterminate-anim-short {
+0% {
+        left: -200%;
+        right: 100%;
+}
+60% {
+        left: 107%;
+        right: -8%;
+}
+100% {
+        left: 107%;
+        right: -8%;
+}
+}
+@keyframes p-progressbar-indeterminate-anim-short {
+0% {
+        left: -200%;
+        right: 100%;
+}
+60% {
+        left: 107%;
+        right: -8%;
+}
+100% {
+        left: 107%;
+        right: -8%;
+}
+}
+</style><style type="text/css">
+.p-fileupload-content {
+    position: relative;
+}
+.p-fileupload-content .p-progressbar {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.p-button.p-fileupload-choose {
+    position: relative;
+    overflow: hidden;
+}
+.p-fileupload-buttonbar {
+    display: flex;
+    flex-wrap: wrap;
+}
+.p-fileupload > input[type='file'],
+.p-fileupload-basic input[type='file'] {
+    display: none;
+}
+.p-fluid .p-fileupload .p-button {
+    width: auto;
+}
+.p-fileupload-file {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.p-fileupload-file-thumbnail {
+    flex-shrink: 0;
+}
+.p-fileupload-file-actions {
+    margin-left: auto;
+}
+</style><style type="text/css">
+.p-inputtextarea-resizable {
+    overflow: hidden;
+    resize: none;
+}
+.p-fluid .p-inputtextarea {
+    width: 100%;
+}
+</style><style type="text/css">
+.p-scrollpanel-wrapper {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    float: left;
+}
+.p-scrollpanel-content {
+    height: calc(100% + 18px);
+    width: calc(100% + 18px);
+    padding: 0 18px 18px 0;
+    position: relative;
+    overflow: scroll;
+    box-sizing: border-box;
+    scrollbar-width: none;
+}
+.p-scrollpanel-content::-webkit-scrollbar {
+    display: none;
+}
+.p-scrollpanel-bar {
+    position: relative;
+    background: #c1c1c1;
+    border-radius: 3px;
+    z-index: 2;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.25s linear;
+}
+.p-scrollpanel-bar-y {
+    width: 9px;
+    top: 0;
+}
+.p-scrollpanel-bar-x {
+    height: 9px;
+    bottom: 0;
+}
+.p-scrollpanel-hidden {
+    visibility: hidden;
+}
+.p-scrollpanel:hover .p-scrollpanel-bar,
+.p-scrollpanel:active .p-scrollpanel-bar {
+    opacity: 1;
+}
+.p-scrollpanel-grabbed {
+    user-select: none;
+}
+</style><style type="text/css">
+.p-tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.p-tag-icon,
+.p-tag-value,
+.p-tag-icon.pi {
+    line-height: 1.5;
+}
+.p-tag.p-tag-rounded {
+    border-radius: 10rem;
+}
+</style><style type="text/css">
+.p-menu-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.p-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.p-menu .p-menuitem-link {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    overflow: hidden;
+    position: relative;
+}
+.p-menu .p-menuitem-text {
+    line-height: 1;
+}
+</style><style type="text/css">
+.p-confirm-popup {
+    position: absolute;
+    margin-top: 10px;
+    top: 0;
+    left: 0;
+}
+.p-confirm-popup-flipped {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* Animation */
+.p-confirm-popup-enter-from {
+    opacity: 0;
+    transform: scaleY(0.8);
+}
+.p-confirm-popup-leave-to {
+    opacity: 0;
+}
+.p-confirm-popup-enter-active {
+    transition: transform 0.12s cubic-bezier(0, 0, 0.2, 1), opacity 0.12s cubic-bezier(0, 0, 0.2, 1);
+}
+.p-confirm-popup-leave-active {
+    transition: opacity 0.1s linear;
+}
+.p-confirm-popup:after,
+.p-confirm-popup:before {
+    bottom: 100%;
+    left: calc(var(--overlayArrowLeft, 0) + 1.25rem);
+    content: ' ';
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+.p-confirm-popup:after {
+    border-width: 8px;
+    margin-left: -8px;
+}
+.p-confirm-popup:before {
+    border-width: 10px;
+    margin-left: -10px;
+}
+.p-confirm-popup-flipped:after,
+.p-confirm-popup-flipped:before {
+    bottom: auto;
+    top: 100%;
+}
+.p-confirm-popup.p-confirm-popup-flipped:after {
+    border-bottom-color: transparent;
+}
+.p-confirm-popup.p-confirm-popup-flipped:before {
+    border-bottom-color: transparent;
+}
+.p-confirm-popup .p-confirm-popup-content {
+    display: flex;
+    align-items: center;
+}
+</style><style type="text/css">
+.p-skeleton {
+    position: relative;
+    overflow: hidden;
+}
+.p-skeleton::after {
+    content: '';
+    animation: p-skeleton-animation 1.2s infinite;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateX(-100%);
+    z-index: 1;
+}
+.p-skeleton.p-skeleton-circle {
+    border-radius: 50%;
+}
+.p-skeleton-none::after {
+    animation: none;
+}
+@keyframes p-skeleton-animation {
+from {
+        transform: translateX(-100%);
+}
+to {
+        transform: translateX(100%);
+}
+}
+</style><style type="text/css">
+.p-tabview-nav-container {
+    position: relative;
+}
+.p-tabview-scrollable .p-tabview-nav-container {
+    overflow: hidden;
+}
+.p-tabview-nav-content {
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    overscroll-behavior: contain auto;
+}
+.p-tabview-nav {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    flex: 1 1 auto;
+}
+.p-tabview-header-action {
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    position: relative;
+    text-decoration: none;
+    overflow: hidden;
+}
+.p-tabview-ink-bar {
+    display: none;
+    z-index: 1;
+}
+.p-tabview-header-action:focus {
+    z-index: 1;
+}
+.p-tabview-title {
+    line-height: 1;
+    white-space: nowrap;
+}
+.p-tabview-nav-btn {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.p-tabview-nav-prev {
+    left: 0;
+}
+.p-tabview-nav-next {
+    right: 0;
+}
+.p-tabview-nav-content::-webkit-scrollbar {
+    display: none;
+}
+</style><style type="text/css">
+.p-toast {
+    position: fixed;
+    width: 25rem;
+}
+.p-toast-message-content {
+    display: flex;
+    align-items: flex-start;
+}
+.p-toast-message-text {
+    flex: 1 1 auto;
+}
+.p-toast-top-right {
+    top: 20px;
+    right: 20px;
+}
+.p-toast-top-left {
+    top: 20px;
+    left: 20px;
+}
+.p-toast-bottom-left {
+    bottom: 20px;
+    left: 20px;
+}
+.p-toast-bottom-right {
+    bottom: 20px;
+    right: 20px;
+}
+.p-toast-top-center {
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.p-toast-bottom-center {
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.p-toast-center {
+    left: 50%;
+    top: 50%;
+    min-width: 20vw;
+    transform: translate(-50%, -50%);
+}
+.p-toast-icon-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+.p-toast-icon-close.p-link {
+    cursor: pointer;
+}
+
+/* Animations */
+.p-toast-message-enter-from {
+    opacity: 0;
+    -webkit-transform: translateY(50%);
+    -ms-transform: translateY(50%);
+    transform: translateY(50%);
+}
+.p-toast-message-leave-from {
+    max-height: 1000px;
+}
+.p-toast .p-toast-message.p-toast-message-leave-to {
+    max-height: 0;
+    opacity: 0;
+    margin-bottom: 0;
+    overflow: hidden;
+}
+.p-toast-message-enter-active {
+    -webkit-transition: transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s;
+}
+.p-toast-message-leave-active {
+    -webkit-transition: max-height 0.45s cubic-bezier(0, 1, 0, 1), opacity 0.3s, margin-bottom 0.3s;
+    transition: max-height 0.45s cubic-bezier(0, 1, 0, 1), opacity 0.3s, margin-bottom 0.3s;
+}
+</style><style type="text/css">
+.p-sidebar-mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    background-color: transparent;
+    transition-property: background-color;
+}
+.p-sidebar-mask.p-component-overlay {
+    pointer-events: auto;
+}
+.p-sidebar-visible {
+    display: flex;
+}
+.p-sidebar {
+    display: flex;
+    flex-direction: column;
+    pointer-events: auto;
+    transform: translate3d(0px, 0px, 0px);
+    position: relative;
+    transition: transform 0.3s;
+}
+.p-sidebar-content {
+    overflow-y: auto;
+    flex-grow: 1;
+}
+.p-sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-shrink: 0;
+}
+.p-sidebar-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+.p-sidebar-full .p-sidebar {
+    transition: none;
+    transform: none;
+    width: 100vw !important;
+    height: 100vh !important;
+    max-height: 100%;
+    top: 0px !important;
+    left: 0px !important;
+}
+
+/* Animation */
+/* Center */
+.p-sidebar-left .p-sidebar-enter-from,
+.p-sidebar-left .p-sidebar-leave-to {
+    transform: translateX(-100%);
+}
+.p-sidebar-right .p-sidebar-enter-from,
+.p-sidebar-right .p-sidebar-leave-to {
+    transform: translateX(100%);
+}
+.p-sidebar-top .p-sidebar-enter-from,
+.p-sidebar-top .p-sidebar-leave-to {
+    transform: translateY(-100%);
+}
+.p-sidebar-bottom .p-sidebar-enter-from,
+.p-sidebar-bottom .p-sidebar-leave-to {
+    transform: translateY(100%);
+}
+.p-sidebar-full .p-sidebar-enter-from,
+.p-sidebar-full .p-sidebar-leave-to {
+    opacity: 0;
+}
+.p-sidebar-full .p-sidebar-enter-active,
+.p-sidebar-full .p-sidebar-leave-active {
+    transition: opacity 400ms cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Position */
+.p-sidebar-left {
+    justify-content: flex-start;
+}
+.p-sidebar-right {
+    justify-content: flex-end;
+}
+.p-sidebar-top {
+    align-items: flex-start;
+}
+.p-sidebar-bottom {
+    align-items: flex-end;
+}
+
+/* Size */
+.p-sidebar-left .p-sidebar {
+    width: 20rem;
+    height: 100%;
+}
+.p-sidebar-right .p-sidebar {
+    width: 20rem;
+    height: 100%;
+}
+.p-sidebar-top .p-sidebar {
+    height: 10rem;
+    width: 100%;
+}
+.p-sidebar-bottom .p-sidebar {
+    height: 10rem;
+    width: 100%;
+}
+.p-sidebar-left .p-sidebar-sm,
+.p-sidebar-right .p-sidebar-sm {
+    width: 20rem;
+}
+.p-sidebar-left .p-sidebar-md,
+.p-sidebar-right .p-sidebar-md {
+    width: 40rem;
+}
+.p-sidebar-left .p-sidebar-lg,
+.p-sidebar-right .p-sidebar-lg {
+    width: 60rem;
+}
+.p-sidebar-top .p-sidebar-sm,
+.p-sidebar-bottom .p-sidebar-sm {
+    height: 10rem;
+}
+.p-sidebar-top .p-sidebar-md,
+.p-sidebar-bottom .p-sidebar-md {
+    height: 20rem;
+}
+.p-sidebar-top .p-sidebar-lg,
+.p-sidebar-bottom .p-sidebar-lg {
+    height: 30rem;
+}
+.p-sidebar-left .p-sidebar-content,
+.p-sidebar-right .p-sidebar-content,
+.p-sidebar-top .p-sidebar-content,
+.p-sidebar-bottom .p-sidebar-content {
+    width: 100%;
+    height: 100%;
+}
+@media screen and (max-width: 64em) {
+.p-sidebar-left .p-sidebar-lg,
+    .p-sidebar-left .p-sidebar-md,
+    .p-sidebar-right .p-sidebar-lg,
+    .p-sidebar-right .p-sidebar-md {
+        width: 20rem;
+}
+}
+</style><link rel="modulepreload" as="script" crossorigin="" href="https://embed-3dwarehouse.sketchup.com/assets/SignInPopover-BrA8QKYW.js"><link rel="stylesheet" href="./SignInPopover-BjQhbc85.css"><style type="text/css">
+                        @media screen and (max-width: 768px) {
+                            .p-toast[pv_id_1] {
+                                width:100%!important;right:0!important;left:0!important;
+                            }
+                        }
+                    </style></head>
+  <body class="light">
+    <div id="app" data-v-app=""><div class="cookie-consent" data-cy="cookie-consent" data-v-1e4fb441="" data-v-7a7a37b1="" style="">We use web browser cookies to create content and ads that are relevant to you. By continuing to use this site, you are consenting to our cookie policy. You can also manage cookie preferences. <a href="https://privacy.sketchup.com/privacy-notice" class="cookie-consent__link" target="_blank" data-v-1e4fb441="">Learn more about privacy and SketchUp.</a><div class="mt-4" data-v-1e4fb441=""><button class="p-button p-component btn-primary btn-lg cookie-consent__button" type="button" data-cy="cookie-consent__button" data-v-1e4fb441="">Agree</button></div></div><div class="app bg-gray-110 dark:bg-gray-1000 min-h-screen" data-v-7a7a37b1=""><div data-v-7a7a37b1=""><div class="app-header bg-white dark:!bg-gray-900 h-[4rem] flex w-full" data-v-7a7a37b1=""><div class="flex w-full justify-between align-center mx-5" data-cy="app-header" data-v-12c66b95="" data-v-7a7a37b1=""><div class="flex items-center" data-v-12c66b95=""><!----><div class="flex align-center" data-v-12c66b95=""><a href="https://embed-3dwarehouse.sketchup.com/" class="router-link-active router-link-exact-active app-header__brand flex align-center cursor-pointer" data-v-12c66b95="" aria-current="page"><i class="wh-3dw-mark wh text-blue-420 dark:text-white mr-3 text-[1.7rem]" data-v-12c66b95=""></i><i class="wh-3dwlogonoicon wh text-lg hidden md:inline-block" data-cy="app-header-title" data-v-12c66b95=""></i></a></div><!----></div><!----><div class="app-header__right-content" data-cy="app-header-right-content" data-v-12c66b95=""><!----><!----><div class="app-header__upload" data-v-12c66b95=""><button data-cy="app-header__upload-icon" data-v-12c66b95=""><i class="wh wh-upload py-2" data-v-12c66b95=""></i></button></div><div class="profile-header flex" data-cy="profile-header" data-v-f466807a="" data-v-12c66b95=""><div class="profile-header__icons" data-v-f466807a=""><img class="hidden" src="./avatar" data-cy="wh-avatar" data-v-88bf57ed=""><div class="p-avatar p-component p-avatar-circle avatar avatar-20" data-cy="avatar__icon" data-v-88bf57ed=""><span class="p-avatar-icon wh wh-user"></span></div><div class="profile-header__username" data-v-f466807a="">3115242940 Q.</div><i class="wh wh-chevron-small-down" data-v-f466807a=""></i></div><!--teleport start--><!--teleport end--><!--teleport start--><!--teleport end--></div></div><!--teleport start--><!--teleport end--><!--teleport start--><!--teleport end--><!--teleport start--><!--teleport end--><!--teleport start--><!--teleport end--></div></div><div class="app-content" data-v-7a7a37b1=""><div class="p-0" data-v-7a7a37b1=""><div class="home-hero relative" data-v-5830c780=""><div class="gradient-overlay" data-v-5830c780=""></div><div class="home-hero__center-container" data-v-5830c780=""><h1 class="home-hero__title" data-cy="home-hero__title" data-v-5830c780="">What can we help you find?</h1><div class="search home-hero__search" data-cy="home-hero__search" data-v-d2b94ce3="" data-v-5830c780=""><div class="search-wrapper" data-v-d2b94ce3=""><div class="search-bar" data-cy="search-bar" data-v-a81acadc="" data-v-d2b94ce3=""><!----><input data-cy="search-bar-input" type="text" placeholder="Search for content..." data-v-a81acadc=""><!----><div data-v-a81acadc=""><button class="image-icon-button" data-v-a81acadc=""><i class="wh wh-image-scene image-icon" data-cy="search-bar__image-icon" data-v-a81acadc=""></i></button></div><button class="search-icon-button" data-v-a81acadc=""><i class="wh search-icon wh-modus-search" data-cy="search-bar__search-icon" data-v-a81acadc=""></i></button><!--teleport start--><!--teleport end--><!--teleport start--><!--teleport end--><!--teleport start--><!--teleport end--></div><!----></div><!----></div></div></div><div data-cy="home-content"><div class="home-tabs" data-v-ccc23f5c=""><div class="p-tabview p-component pt-10" data-v-ccc23f5c=""><div class="p-tabview-nav-container"><!----><div class="p-tabview-nav-content"><ul class="p-tabview-nav" role="tablist"><li class="p-tabview-header p-highlight" role="presentation" data-index="0"><a id="pv_id_6_0_header_action" class="p-tabview-nav-link p-tabview-header-action" tabindex="0" role="tab" aria-selected="true" aria-controls="pv_id_6_0_content"><!----><div class="panel-header" data-v-ccc23f5c="">Discover What's New</div></a></li><li class="p-tabview-header" role="presentation" data-index="1"><a id="pv_id_6_1_header_action" class="p-tabview-nav-link p-tabview-header-action" tabindex="-1" role="tab" aria-selected="false" aria-controls="pv_id_6_1_content"><!----><div class="panel-header" data-v-ccc23f5c="">My 3D Warehouse</div></a></li><li class="p-tabview-ink-bar" role="presentation" aria-hidden="true" style="width: 0px; left: 0px;"></li></ul></div><!----></div><div class="p-tabview-panels"><div class="p-tabview-panel" role="tabpanel" aria-labelledby="pv_id_6_0_header_action"><div class="home-section-bg discover-section" data-cy="discover-section-0325e252-6378-4c97-9167-6ff28e96924e" data-v-e2e1fb60="" data-v-357215f1=""><div class="generic-section twh-container" data-v-e2e1fb60=""><div class="max-w-centered" data-v-e2e1fb60=""><div class="generic-section__top-heading" data-cy="generic-section__top-heading" data-v-e2e1fb60=""></div><div class="generic-section__title-container" data-v-e2e1fb60=""><div class="generic-section__title" data-cy="generic-section__title" data-v-e2e1fb60=""></div><div data-v-e2e1fb60=""><!----></div></div><div data-v-357215f1=""><div class="flex gap-4" data-v-357215f1=""><div data-v-357215f1=""><div class="discover-section__title" data-cy="discover-section-0325e252-6378-4c97-9167-6ff28e96924e-title" data-v-357215f1="">Featured Content:</div><div class="discover-section__description" data-cy="discover-section-0325e252-6378-4c97-9167-6ff28e96924e-desc" data-v-357215f1="">All New Certified Lighting... Now with Ambient Occlusion!</div></div><div class="discover-section__view-more" data-cy="discover-section-0325e252-6378-4c97-9167-6ff28e96924e-vm" data-v-357215f1="">View more</div></div><div class="grid-content pt-6" data-v-357215f1=""><div data-v-357215f1=""><div class="wh-product-card" data-v-6ecddf3a="" data-v-357215f1=""><div class="wh-card-wrapper" data-v-6ecddf3a=""><div class="p-card p-component wh-card"><div class="p-card-header"><a href="https://embed-3dwarehouse.sketchup.com/model/a8ffc246-7d2b-43bd-9a33-d98e726ed8b9/CUBE-5266-5272" class="" data-cy="product-card-header-wrapper" data-v-6ecddf3a=""><div class="a-card-header" data-cy="a-card-header" data-v-68dc7973="" data-v-6ecddf3a=""><div class="relative w-full h-0 pt-[calc(50%+0.625rem)] cursor-pointer" data-v-68dc7973=""><div class="v-responsive v-img v-img--booting a-card-header__image w-full" data-cy="a-card-header-image" size="48" data-v-68dc7973=""><div class="v-responsive__sizer"></div><!----><!----><!----><!----><!----><!----></div></div><div class="a-card-header__chips" data-v-68dc7973=""><div class="chip" data-cy="a-card-chip-product" data-v-68dc7973=""><span class="p-tag p-component bg-blue-400" data-cy="card-header__chip_product"><!----><span class="p-tag-value">Product</span></span><!----></div><div class="chip cursor-pointer" data-cy="a-card-chip-certified" data-v-68dc7973=""><span class="p-tag p-component bg-blue-500" data-cy="card-header__chip_certified"><!----><span class="p-tag-value">Certified</span></span><!--teleport start--><!--teleport end--></div></div></div></a></div><div class="p-card-body"><!----><!----><div class="p-card-content"><div class="a-card-content" data-v-9f1972ce="" data-v-6ecddf3a=""><div class="a-card-content__col flex flex-col" data-v-9f1972ce=""><div class="a-card-content__title" data-v-9f1972ce=""><!----><a href="https://embed-3dwarehouse.sketchup.com/model/a8ffc246-7d2b-43bd-9a33-d98e726ed8b9/CUBE-5266-5272" class="a-card-content__title-link" data-cy="a-card-content__title-link" data-v-9f1972ce="">CUBE-5266-5272</a></div><div class="a-card-content__info" data-v-9f1972ce=""><div class="a-card-content__product-info" data-v-9f1972ce=""><i class="wh wh-file-size" data-cy="a-card-content__wh-file-size" data-v-9f1972ce=""></i><span class="mr-4" data-cy="a-card-content__product-info--file-size" data-v-9f1972ce="">98 KB</span><i class="wh wh-polygoncount" data-cy="a-card-content__wh-polygoncount" data-v-9f1972ce=""></i><span data-cy="a-card-content__product-info--polygon-count" data-v-9f1972ce="">636</span></div><!----><!----></div></div></div></div><div class="p-card-footer"><div class="a-card-footer" data-v-8b7aedcc="" data-v-6ecddf3a=""><div class="footer-item-left" data-v-8b7aedcc=""><a href="https://embed-3dwarehouse.sketchup.com/org/610759ec-5901-486d-b88a-20fc33a28b2e/Nowodvorski-Lighting-Official" class="a-card-footer__user-container cursor-pointer" data-cy="a-card-footer-user-container" data-v-8b7aedcc=""><img class="hidden" src="./custom.jpeg" data-cy="wh-avatar" data-v-88bf57ed=""><div class="p-avatar p-component p-avatar-image p-avatar-circle avatar avatar-16" type="org" data-cy="avatar__image" data-v-88bf57ed=""><img src="./custom.jpeg"></div><div class="a-card-footer__name" data-cy="a-card-footer__name" title="Nowodvorski Lighting Official" data-v-8b7aedcc="">Nowodvorski Lighting Official</div></a></div><div class="a-card-footer__icons footer-item-right" data-v-8b7aedcc=""><i class="wh wh-material a-card-footer__icon py-[0.125rem]" data-cy="a-card-footer__icon-wh-material" data-v-8b7aedcc=""></i><div class="w-full" data-v-4b4a2662="" data-v-8b7aedcc=""><button class="btn primary-btn icon" hover="true" data-cy="download-button-a8ffc246-7d2b-43bd-9a33-d98e726ed8b9" data-v-4b4a2662=""><i data-cy="download-icon" class="wh wh-download icon" data-v-4b4a2662=""></i></button><!--teleport start--><!--teleport end--><!--teleport start--><!--teleport end--><!--teleport start--><!--teleport end--></div></div></div></div></div></div><!----></div></div></div><div data-v-357215f1=""><div class="wh-product-card" data-v-6ecddf3a="" data-v-357215f1=""><div class="wh-card-wrapper" data-v-6ecddf3a=""><div class="p-card p-component wh-card"><div class="p-card-header"><a href="https://embed-3dwarehouse.sketchup.com/model/ac998924-7f20-4e84-8590-d1f399c7c512/EYE-WALL-II-8073-8072-8074" class="" data-cy="product-card-header-wrapper" data-v-6ecddf3a=""><div class="a-card-header" data-cy="a-card-header" data-v-68dc7973="" data-v-6ecddf3a=""><div class="relative w-full h-0 pt-[calc(50%+0.625rem)] cursor-pointer" data-v-68dc7973=""><div class="v-responsive v-img v-img--booting a-card-header__image w-full" data-cy="a-card-header-image" size="48" data-v-68dc7973=""><div class="v-responsive__sizer"></div><!----><!----><!----><!----><!----><!----></div></div><div class="a-card-header__chips" data-v-68dc7973=""><div class="chip" data-cy="a-card-chip-product" data-v-68dc7973=""><span class="p-tag p-component bg-blue-400" data-cy="card-header__chip_product"><!----><span class="p-tag-value">Product</span></span><!----></div><div class="chip cursor-pointer" data-cy="a-card-chip-certified" data-v-68dc7973=""><span class="p-tag p-component bg-blue-500" data-cy="card-header__chip_certified"><!----><span class="p-tag-value">Certified</span></span><!--teleport start--><!--teleport end--></div></div></div></a></div><div class="p-card-body"><!----><!----><div class="p-card-content"><div class="a-card-content" data-v-9f1972ce="" data-v-6ecddf3a=""><div class="a-card-content__col flex flex-col" data-v-9f1972ce=""><div class="a-card-content__title" data-v-9f1972ce=""><!----><a href="https://embed-3dwarehouse.sketchup.com/model/ac998924-7f20-4e84-8590-d1f399c7c512/EYE-WALL-II-8073-8072-8074" class="a-card-content__title-link" data-cy="a-card-content__title-link" data-v-9f1972ce="">EYE-WALL-II-8073-8072-8074</a></div><div class="a-card-content__info" data-v-9f1972ce=""><div class="a-card-content__product-info" data-v-9f1972ce=""><i class="wh wh-file-size" data-cy="a-card-content__wh-file-size" data-v-9f1972ce=""></i><span class="mr-4" data-cy="a-card-content__product-info--file-size" data-v-9f1972ce="">81 KB</span><i class="wh wh-polygoncount" data-cy="a-card-content__wh-polygoncount" data-v-9f1972ce=""></i><span data-cy="a-card-content__product-info--polygon-count" data-v-9f1972ce="">429</span></div><!----><!----></div></div></div></div><div class="p-card-footer"><div class="a-card-footer" data-v-8b7aedcc="" data-v-6ecddf3a=""><div class="footer-item-left" data-v-8b7aedcc=""><a href="https://embed-3dwarehouse.sketchup.com/org/610759ec-5901-486d-b88a-20fc33a28b2e/Nowodvorski-Lighting-Official" class="a-card-footer__user-container cursor-pointer" data-cy="a-card-footer-user-container" data-v-8b7aedcc=""><img class="hidden" src="./custom.jpeg" data-cy="wh-avatar" data-v-88bf57ed=""><div class="p-avatar p-component p-avatar-image p-avatar-circle avatar avatar-16" type="org" data-cy="avatar__image" data-v-88bf57ed=""><img src="./custom.jpeg"></div><div class="a-card-footer__name" data-cy="a-card-footer__name" title="Nowodvorski Lighting Official" data-v-8b7aedcc="">Nowodvorski Lighting Official</div></a></div><div class="a-card-footer__icons footer-item-right" data-v-8b7aedcc=""><i class="wh wh-material a-card-footer__icon py-[0.125rem]" data-cy="a-card-footer__icon-wh-material" data-v-8b7aedcc=""></i><div class="w-full" data-v-4b4a2662="" data-v-8b7aedcc=""><button class="btn primary-btn icon" hover="true" data-cy="download-button-ac998924-7f20-4e84-8590-d1f399c7c512" data-v-4b4a2662=""><i data-cy="download-icon" class="wh wh-download icon" data-v-4b4a2662=""></i></button><!--teleport start--><!--teleport end--><!--teleport start--><!--teleport end--><!--teleport start--><!--teleport end--></div></div></div></div></div></div><!----></div></div></div><div data-v-357215f1=""><div class="wh-product-card" data-v-6ecddf3a="" data-v-357215f1=""><div class="wh-card-wrapper" data-v-6ecddf3a=""><div class="p-card p-component wh-card"><div class="p-card-header"><a href="https://embed-3dwarehouse.sketchup.com/model/19cf9568-072c-46d7-939e-b6a5f605ee91/RBW-Glyph-Sconce-GY-IP65" class="" data-cy="product-card-header-wrapper" data-v-6ecddf3a=""><div class="a-card-header" data-cy="a-card-header" data-v-68dc7973="" data-v-6ecddf3a=""><div class="relative w-full h-0 pt-[calc(50%+0.625rem)] cursor-pointer" data-v-68dc7973=""><div class="v-responsive v-img v-img--booting a-card-header__image w-full" data-cy="a-card-header-image" size="48" data-v-68dc7973=""><div class="v-responsive__sizer"></div><!----><!----><!----><!----><!----><!----></div></div><div class="a-card-header__chips" data-v-68dc7973=""><div class="chip" data-cy="a-card-chip-product" data-v-68dc7973=""><span class="p-tag p-component bg-blue-400" data-cy="card-header__chip_product"><!----><span class="p-tag-value">Product</span></span><!----></div><div class="chip cursor-pointer" data-cy="a-card-chip-certified" data-v-68dc7973=""><span class="p-tag p-component bg-blue-500" data-cy="card-header__chip_certified"><!----><span class="p-tag-value">Certified</span></span><!--teleport start--><!--teleport end--></div></div></div></a></div><div class="p-card-body"><!----><!----><div class="p-card-content"><div class="a-card-content" data-v-9f1972ce="" data-v-6ecddf3a=""><div class="a-card-content__col flex flex-col" data-v-9f1972ce=""><div class="a-card-content__title" data-v-9f1972ce=""><!----><a href="https://embed-3dwarehouse.sketchup.com/model/19cf9568-072c-46d7-939e-b6a5f605ee91/RBW-Glyph-Sconce-GY-IP65" class="a-card-content__title-link" data-cy="a-card-content__title-link" data-v-9f1972ce="">RBW Glyph Sconce GY-IP65</a></div><div class="a-card-content__info" data-v-9f1972ce=""><div class="a-card-content__product-info" data-v-9f1972ce=""><i class="wh wh-file-size" data-cy="a-card-content__wh-file-size" data-v-9f1972ce=""></i><span class="mr-4" data-cy="a-card-content__product-info--file-size" data-v-9f1972ce="">327 KB</span><i class="wh wh-polygoncount" data-cy="a-card-content__wh-polygoncount" data-v-9f1972ce=""></i><span data-cy="a-card-content__product-info--polygon-count" data-v-9f1972ce="">5,066</span></div><!----><!----></div></div></div></div><div class="p-card-footer"><div class="a-card-footer" data-v-8b7aedcc="" data-v-6ecddf3a=""><div class="footer-item-left" data-v-8b7aedcc=""><a href="https://embed-3dwarehouse.sketchup.com/org/1bf2fe26-5ff7-478e-a8df-34e092f72a73/RBW" class="a-card-footer__user-container cursor-pointer" data-cy="a-card-footer-user-container" data-v-8b7aedcc=""><img class="hidden" src="./temp-thumbnail-734912384" data-cy="wh-avatar" data-v-88bf57ed=""><div class="p-avatar p-component p-avatar-image p-avatar-circle avatar avatar-16" type="org" data-cy="avatar__image" data-v-88bf57ed=""><img src="./temp-thumbnail-734912384"></div><div class="a-card-footer__name" data-cy="a-card-footer__name" title="RBW" data-v-8b7aedcc="">RBW</div></a></div><div class="a-card-footer__icons footer-item-right" data-v-8b7aedcc=""><i class="wh wh-material a-card-footer__icon py-[0.125rem]" data-cy="a-card-footer__icon-wh-material" data-v-8b7aedcc=""></i><div class="w-full" data-v-4b4a2662="" data-v-8b7aedcc=""><button class="btn primary-btn icon" hover="true" data-cy="download-button-19cf9568-072c-46d7-939e-b6a5f605ee91" data-v-4b4a2662=""><i data-cy="download-icon" class="wh wh-download icon" data-v-4b4a2662=""></i></button><!--teleport start--><!--teleport end--><!--teleport start--><!--teleport end--><!--teleport start--><!--teleport end--></div></div></div></div></div></div><!----></div></div></div><div data-v-357215f1=""><div class="wh-product-card" data-v-6ecddf3a="" data-v-357215f1=""><div class="wh-card-wrapper" data-v-6ecddf3a=""><div class="p-card p-component wh-card"><div class="p-card-header"><a href="https://embed-3dwarehouse.sketchup.com/model/7e6864dc-a494-4ab7-b1ff-aafdc12ff2f8/RBW-Brim-BRM-SW-S1" class="" data-cy="product-card-header-wrapper" data-v-6ecddf3a=""><div class="a-card-header" data-cy="a-card-header" data-v-68dc7973="" data-v-6ecddf3a=""><div class="relative w-full h-0 pt-[calc(50%+0.625rem)] cursor-pointer" data-v-68dc7973=""><div class="v-responsive v-img v-img--booting a-card-header__image w-full" data-cy="a-card-header-image" size="48" data-v-68dc7973=""><div class="v-responsive__sizer"></div><!----><!----><!----><!----><!----><!----></div></div><div class="a-card-header__chips" data-v-68dc7973=""><div class="chip" data-cy="a-card-chip-product" data-v-68dc7973=""><span class="p-tag p-component bg-blue-400" data-cy="card-header__chip_product"><!----><span class="p-tag-value">Product</span></span><!----></div><div class="chip cursor-pointer" data-cy="a-card-chip-certified" data-v-68dc7973=""><span class="p-tag p-component bg-blue-500" data-cy="card-header__chip_certified"><!----><span class="p-tag-value">Certified</span></span><!--teleport start--><!--teleport end--></div></div></div></a></div><div class="p-card-body"><!----><!----><div class="p-card-content"><div class="a-card-content" data-v-9f1972ce="" data-v-6ecddf3a=""><div class="a-card-content__col flex flex-col" data-v-9f1972ce=""><div class="a-card-content__title" data-v-9f1972ce=""><!----><a href="https://embed-3dwarehouse.sketchup.com/model/7e6864dc-a494-4ab7-b1ff-aafdc12ff2f8/RBW-Brim-BRM-SW-S1" class="a-card-content__title-link" data-cy="a-card-content__title-link" data-v-9f1972ce="">RBW Brim BRM-SW-S1</a></div><div class="a-card-content__info" data-v-9f1972ce=""><div class="a-card-content__product-info" data-v-9f1972ce=""><i class="wh wh-file-size" data-cy="a-card-content__wh-file-size" data-v-9f1972ce=""></i><span class="mr-4" data-cy="a-card-content__product-info--file-size" data-v-9f1972ce="">119 KB</span><i class="wh wh-polygoncount" data-cy="a-card-content__wh-polygoncount" data-v-9f1972ce=""></i><span data-cy="a-card-content__product-info--polygon-count" data-v-9f1972ce="">1,632</span></div><!----><!----></div></div></div></div><div class="p-card-footer"><div class="a-card-footer" data-v-8b7aedcc="" data-v-6ecddf3a=""><div class="footer-item-left" data-v-8b7aedcc=""><a href="https://embed-3dwarehouse.sketchup.com/org/1bf2fe26-5ff7-478e-a8df-34e092f72a73/RBW" class="a-card-footer__user-container cursor-pointer" data-cy="a-card-footer-user-container" data-v-8b7aedcc=""><img class="hidden" src="./temp-thumbnail-734912384" data-cy="wh-avatar" data-v-88bf57ed=""><div class="p-avatar p-component p-avatar-image p-avatar-circle avatar avatar-16" type="org" data-cy="avatar__image" data-v-88bf57ed=""><img src="./temp-thumbnail-734912384"></div><div class="a-card-footer__name" data-cy="a-card-footer__name" title="RBW" data-v-8b7aedcc="">RBW</div></a></div><div class="a-card-footer__icons footer-item-right" data-v-8b7aedcc=""><i class="wh wh-material a-card-footer__icon py-[0.125rem]" data-cy="a-card-footer__icon-wh-material" data-v-8b7aedcc=""></i><div class="w-full" data-v-4b4a2662="" data-v-8b7aedcc=""><button class="btn primary-btn icon" hover="true" data-cy="download-button-7e6864dc-a494-4ab7-b1ff-aafdc12ff2f8" data-v-4b4a2662=""><i data-cy="download-icon" class="wh wh-download icon" data-v-4b4a2662=""></i></button><!--teleport start--><!--teleport end--><!--teleport start--><!--teleport end--><!--teleport start--><!--teleport end--></div></div></div></div></div></div><!----></div></div></div><div data-v-357215f1=""><div class="wh-product-card" data-v-6ecddf3a="" data-v-357215f1=""><div class="wh-card-wrapper" data-v-6ecddf3a=""><div class="p-card p-component wh-card"><div class="p-card-header"><a href="https://embed-3dwarehouse.sketchup.com/model/1fcb54e5-5351-4166-9257-bb84fad76391/EXE-8331" class="" data-cy="product-card-header-wrapper" data-v-6ecddf3a=""><div class="a-card-header" data-cy="a-card-header" data-v-68dc7973="" data-v-6ecddf3a=""><div class="relative w-full h-0 pt-[calc(50%+0.625rem)] cursor-pointer" data-v-68dc7973=""><div class="v-responsive v-img v-img--booting a-card-header__image w-full" data-cy="a-card-header-image" size="48" data-v-68dc7973=""><div class="v-responsive__sizer"></div><!----><!----><!----><!----><!----><!----></div></div><div class="a-card-header__chips" data-v-68dc7973=""><div class="chip" data-cy="a-card-chip-product" data-v-68dc7973=""><span class="p-tag p-component bg-blue-400" data-cy="card-header__chip_product"><!----><span class="p-tag-value">Product</span></span><!----></div><div class="chip cursor-pointer" data-cy="a-card-chip-certified" data-v-68dc7973=""><span class="p-tag p-component bg-blue-500" data-cy="card-header__chip_certified"><!----><span class="p-tag-value">Certified</span></span><!--teleport start--><!--teleport end--></div></div></div></a></div><div class="p-card-body"><!----><!----><div class="p-card-content"><div class="a-card-content" data-v-9f1972ce="" data-v-6ecddf3a=""><div class="a-card-content__col flex flex-col" data-v-9f1972ce=""><div class="a-card-content__title" data-v-9f1972ce=""><!----><a href="https://embed-3dwarehouse.sketchup.com/model/1fcb54e5-5351-4166-9257-bb84fad76391/EXE-8331" class="a-card-content__title-link" data-cy="a-card-content__title-link" data-v-9f1972ce="">EXE-8331</a></div><div class="a-card-content__info" data-v-9f1972ce=""><div class="a-card-content__product-info" data-v-9f1972ce=""><i class="wh wh-file-size" data-cy="a-card-content__wh-file-size" data-v-9f1972ce=""></i><span class="mr-4" data-cy="a-card-content__product-info--file-size" data-v-9f1972ce="">91 KB</span><i class="wh wh-polygoncount" data-cy="a-card-content__wh-polygoncount" data-v-9f1972ce=""></i><span data-cy="a-card-content__product-info--polygon-count" data-v-9f1972ce="">484</span></div><!----><!----></div></div></div></div><div class="p-card-footer"><div class="a-card-footer" data-v-8b7aedcc="" data-v-6ecddf3a=""><div class="footer-item-left" data-v-8b7aedcc=""><a href="https://embed-3dwarehouse.sketchup.com/org/610759ec-5901-486d-b88a-20fc33a28b2e/Nowodvorski-Lighting-Official" class="a-card-footer__user-container cursor-pointer" data-cy="a-card-footer-user-container" data-v-8b7aedcc=""><img class="hidden" src="./custom.jpeg" data-cy="wh-avatar" data-v-88bf57ed=""><div class="p-avatar p-component p-avatar-image p-avatar-circle avatar avatar-16" type="org" data-cy="avatar__image" data-v-88bf57ed=""><img src="./custom.jpeg"></div><div class="a-card-footer__name" data-cy="a-card-footer__name" title="Nowodvorski Lighting Official" data-v-8b7aedcc="">Nowodvorski Lighting Official</div></a></div><div class="a-card-footer__icons footer-item-right" data-v-8b7aedcc=""><i class="wh wh-material a-card-footer__icon py-[0.125rem]" data-cy="a-card-footer__icon-wh-material" data-v-8b7aedcc=""></i><div class="w-full" data-v-4b4a2662="" data-v-8b7aedcc=""><button class="btn primary-btn icon" hover="true" data-cy="download-button-1fcb54e5-5351-4166-9257-bb84fad76391" data-v-4b4a2662=""><i data-cy="download-icon" class="wh wh-download icon" data-v-4b4a2662=""></i></button><!--teleport start--><!--teleport end--><!--teleport start--><!--teleport end--><!--teleport start--><!--teleport end--></div></div></div></div></div></div><!----></div></div></div><div data-v-357215f1=""><div class="wh-product-card" data-v-6ecddf3a="" data-v-357215f1=""><div class="wh-card-wrapper" data-v-6ecddf3a=""><div class="p-card p-component wh-card"><div class="p-card-header"><a href="https://embed-3dwarehouse.sketchup.com/model/4414d35c-1bfd-4c83-a246-8fc8c0c10cd9/Helion-80cm" class="" data-cy="product-card-header-wrapper" data-v-6ecddf3a=""><div class="a-card-header" data-cy="a-card-header" data-v-68dc7973="" data-v-6ecddf3a=""><div class="relative w-full h-0 pt-[calc(50%+0.625rem)] cursor-pointer" data-v-68dc7973=""><div class="v-responsive v-img v-img--booting a-card-header__image w-full" data-cy="a-card-header-image" size="48" data-v-68dc7973=""><div class="v-responsive__sizer"></div><!----><!----><!----><!----><!----><!----></div></div><div class="a-card-header__chips" data-v-68dc7973=""><div class="chip" data-cy="a-card-chip-product" data-v-68dc7973=""><span class="p-tag p-component bg-blue-400" data-cy="card-header__chip_product"><!----><span class="p-tag-value">Product</span></span><!----></div><div class="chip cursor-pointer" data-cy="a-card-chip-certified" data-v-68dc7973=""><span class="p-tag p-component bg-blue-500" data-cy="card-header__chip_certified"><!----><span class="p-tag-value">Certified</span></span><!--teleport start--><!--teleport end--></div></div></div></a></div><div class="p-card-body"><!----><!----><div class="p-card-content"><div class="a-card-content" data-v-9f1972ce="" data-v-6ecddf3a=""><div class="a-card-content__col flex flex-col" data-v-9f1972ce=""><div class="a-card-content__title" data-v-9f1972ce=""><!----><a href="https://embed-3dwarehouse.sketchup.com/model/4414d35c-1bfd-4c83-a246-8fc8c0c10cd9/Helion-80cm" class="a-card-content__title-link" data-cy="a-card-content__title-link" data-v-9f1972ce="">Helion 80cm</a></div><div class="a-card-content__info" data-v-9f1972ce=""><div class="a-card-content__product-info" data-v-9f1972ce=""><i class="wh wh-file-size" data-cy="a-card-content__wh-file-size" data-v-9f1972ce=""></i><span class="mr-4" data-cy="a-card-content__product-info--file-size" data-v-9f1972ce="">226 KB</span><i class="wh wh-polygoncount" data-cy="a-card-content__wh-polygoncount" data-v-9f1972ce=""></i><span data-cy="a-card-content__product-info--polygon-count" data-v-9f1972ce="">1,042</span></div><!----><!----></div></div></div></div><div class="p-card-footer"><div class="a-card-footer" data-v-8b7aedcc="" data-v-6ecddf3a=""><div class="footer-item-left" data-v-8b7aedcc=""><a href="https://embed-3dwarehouse.sketchup.com/org/cc555e63-1198-46cc-a6dc-cb8885ce7659/LEDS-C4" class="a-card-footer__user-container cursor-pointer" data-cy="a-card-footer-user-container" data-v-8b7aedcc=""><img class="hidden" src="./custom(1).jpeg" data-cy="wh-avatar" data-v-88bf57ed=""><div class="p-avatar p-component p-avatar-image p-avatar-circle avatar avatar-16" type="org" data-cy="avatar__image" data-v-88bf57ed=""><img src="./custom(1).jpeg"></div><div class="a-card-footer__name" data-cy="a-card-footer__name" title="LEDS C4" data-v-8b7aedcc="">LEDS C4</div></a></div><div class="a-card-footer__icons footer-item-right" data-v-8b7aedcc=""><i class="wh wh-material a-card-footer__icon py-[0.125rem]" data-cy="a-card-footer__icon-wh-material" data-v-8b7aedcc=""></i><div class="w-full" data-v-4b4a2662="" data-v-8b7aedcc=""><button class="btn primary-btn icon" hover="true" data-cy="download-button-4414d35c-1bfd-4c83-a246-8fc8c0c10cd9" data-v-4b4a2662=""><i data-cy="download-icon" class="wh wh-download icon" data-v-4b4a2662=""></i></button><!--teleport start--><!--teleport end--><!--teleport start--><!--teleport end--><!--teleport start--><!--teleport end--></div></div></div></div></div></div><!----></div></div></div><div data-v-357215f1=""><div class="wh-product-card" data-v-6ecddf3a="" data-v-357215f1=""><div class="wh-card-wrapper" data-v-6ecddf3a=""><div class="p-card p-component wh-card"><div class="p-card-header"><a href="https://embed-3dwarehouse.sketchup.com/model/fcbf9666-e84e-4115-9127-55575b82602b/HEMISPHERE-SUPER-S-10618-10617-10616" class="" data-cy="product-card-header-wrapper" data-v-6ecddf3a=""><div class="a-card-header" data-cy="a-card-header" data-v-68dc7973="" data-v-6ecddf3a=""><div class="relative w-full h-0 pt-[calc(50%+0.625rem)] cursor-pointer" data-v-68dc7973=""><div class="v-responsive v-img v-img--booting a-card-header__image w-full" data-cy="a-card-header-image" size="48" data-v-68dc7973=""><div class="v-responsive__sizer"></div><!----><!----><!----><!----><!----><!----></div></div><div class="a-card-header__chips" data-v-68dc7973=""><div class="chip" data-cy="a-card-chip-product" data-v-68dc7973=""><span class="p-tag p-component bg-blue-400" data-cy="card-header__chip_product"><!----><span class="p-tag-value">Product</span></span><!----></div><div class="chip cursor-pointer" data-cy="a-card-chip-certified" data-v-68dc7973=""><span class="p-tag p-component bg-blue-500" data-cy="card-header__chip_certified"><!----><span class="p-tag-value">Certified</span></span><!--teleport start--><!--teleport end--></div></div></div></a></div><div class="p-card-body"><!----><!----><div class="p-card-content"><div class="a-card-content" data-v-9f1972ce="" data-v-6ecddf3a=""><div class="a-card-content__col flex flex-col" data-v-9f1972ce=""><div class="a-card-content__title" data-v-9f1972ce=""><!----><a href="https://embed-3dwarehouse.sketchup.com/model/fcbf9666-e84e-4115-9127-55575b82602b/HEMISPHERE-SUPER-S-10618-10617-10616" class="a-card-content__title-link" data-cy="a-card-content__title-link" data-v-9f1972ce="">HEMISPHERE-SUPER-S-10618-10617-10616</a></div><div class="a-card-content__info" data-v-9f1972ce=""><div class="a-card-content__product-info" data-v-9f1972ce=""><i class="wh wh-file-size" data-cy="a-card-content__wh-file-size" data-v-9f1972ce=""></i><span class="mr-4" data-cy="a-card-content__product-info--file-size" data-v-9f1972ce="">296 KB</span><i class="wh wh-polygoncount" data-cy="a-card-content__wh-polygoncount" data-v-9f1972ce=""></i><span data-cy="a-card-content__product-info--polygon-count" data-v-9f1972ce="">8,280</span></div><!----><!----></div></div></div></div><div class="p-card-footer"><div class="a-card-footer" data-v-8b7aedcc="" data-v-6ecddf3a=""><div class="footer-item-left" data-v-8b7aedcc=""><a href="https://embed-3dwarehouse.sketchup.com/org/610759ec-5901-486d-b88a-20fc33a28b2e/Nowodvorski-Lighting-Official" class="a-card-footer__user-container cursor-pointer" data-cy="a-card-footer-user-container" data-v-8b7aedcc=""><img class="hidden" src="./custom.jpeg" data-cy="wh-avatar" data-v-88bf57ed=""><div class="p-avatar p-component p-avatar-image p-avatar-circle avatar avatar-16" type="org" data-cy="avatar__image" data-v-88bf57ed=""><img src="./custom.jpeg"></div><div class="a-card-footer__name" data-cy="a-card-footer__name" title="Nowodvorski Lighting Official" data-v-8b7aedcc="">Nowodvorski Lighting Official</div></a></div><div class="a-card-footer__icons footer-item-right" data-v-8b7aedcc=""><i class="wh wh-material a-card-footer__icon py-[0.125rem]" data-cy="a-card-footer__icon-wh-material" data-v-8b7aedcc=""></i><div class="w-full" data-v-4b4a2662="" data-v-8b7aedcc=""><button class="btn primary-btn icon" hover="true" data-cy="download-button-fcbf9666-e84e-4115-9127-55575b82602b" data-v-4b4a2662=""><i data-cy="download-icon" class="wh wh-download icon" data-v-4b4a2662=""></i></button><!--teleport start--><!--teleport end--><!--teleport start--><!--teleport end--><!--teleport start--><!--teleport end--></div></div></div></div></div></div><!----></div></div></div><div data-v-357215f1=""><div class="wh-product-card" data-v-6ecddf3a="" data-v-357215f1=""><div class="wh-card-wrapper" data-v-6ecddf3a=""><div class="p-card p-component wh-card"><div class="p-card-header"><a href="https://embed-3dwarehouse.sketchup.com/model/ebc9ca78-45ce-4cca-9a18-cf44dfc6b5c7/Noway-Small" class="" data-cy="product-card-header-wrapper" data-v-6ecddf3a=""><div class="a-card-header" data-cy="a-card-header" data-v-68dc7973="" data-v-6ecddf3a=""><div class="relative w-full h-0 pt-[calc(50%+0.625rem)] cursor-pointer" data-v-68dc7973=""><div class="v-responsive v-img v-img--booting a-card-header__image w-full" data-cy="a-card-header-image" size="48" data-v-68dc7973=""><div class="v-responsive__sizer"></div><!----><!----><!----><!----><!----><!----></div></div><div class="a-card-header__chips" data-v-68dc7973=""><div class="chip" data-cy="a-card-chip-product" data-v-68dc7973=""><span class="p-tag p-component bg-blue-400" data-cy="card-header__chip_product"><!----><span class="p-tag-value">Product</span></span><!----></div><div class="chip cursor-pointer" data-cy="a-card-chip-certified" data-v-68dc7973=""><span class="p-tag p-component bg-blue-500" data-cy="card-header__chip_certified"><!----><span class="p-tag-value">Certified</span></span><!--teleport start--><!--teleport end--></div></div></div></a></div><div class="p-card-body"><!----><!----><div class="p-card-content"><div class="a-card-content" data-v-9f1972ce="" data-v-6ecddf3a=""><div class="a-card-content__col flex flex-col" data-v-9f1972ce=""><div class="a-card-content__title" data-v-9f1972ce=""><!----><a href="https://embed-3dwarehouse.sketchup.com/model/ebc9ca78-45ce-4cca-9a18-cf44dfc6b5c7/Noway-Small" class="a-card-content__title-link" data-cy="a-card-content__title-link" data-v-9f1972ce="">Noway Small</a></div><div class="a-card-content__info" data-v-9f1972ce=""><div class="a-card-content__product-info" data-v-9f1972ce=""><i class="wh wh-file-size" data-cy="a-card-content__wh-file-size" data-v-9f1972ce=""></i><span class="mr-4" data-cy="a-card-content__product-info--file-size" data-v-9f1972ce="">354 KB</span><i class="wh wh-polygoncount" data-cy="a-card-content__wh-polygoncount" data-v-9f1972ce=""></i><span data-cy="a-card-content__product-info--polygon-count" data-v-9f1972ce="">2,349</span></div><!----><!----></div></div></div></div><div class="p-card-footer"><div class="a-card-footer" data-v-8b7aedcc="" data-v-6ecddf3a=""><div class="footer-item-left" data-v-8b7aedcc=""><a href="https://embed-3dwarehouse.sketchup.com/org/cc555e63-1198-46cc-a6dc-cb8885ce7659/LEDS-C4" class="a-card-footer__user-container cursor-pointer" data-cy="a-card-footer-user-container" data-v-8b7aedcc=""><img class="hidden" src="./custom(1).jpeg" data-cy="wh-avatar" data-v-88bf57ed=""><div class="p-avatar p-component p-avatar-image p-avatar-circle avatar avatar-16" type="org" data-cy="avatar__image" data-v-88bf57ed=""><img src="./custom(1).jpeg"></div><div class="a-card-footer__name" data-cy="a-card-footer__name" title="LEDS C4" data-v-8b7aedcc="">LEDS C4</div></a></div><div class="a-card-footer__icons footer-item-right" data-v-8b7aedcc=""><i class="wh wh-material a-card-footer__icon py-[0.125rem]" data-cy="a-card-footer__icon-wh-material" data-v-8b7aedcc=""></i><div class="w-full" data-v-4b4a2662="" data-v-8b7aedcc=""><button class="btn primary-btn icon" hover="true" data-cy="download-button-ebc9ca78-45ce-4cca-9a18-cf44dfc6b5c7" data-v-4b4a2662=""><i data-cy="download-icon" class="wh wh-download icon" data-v-4b4a2662=""></i></button><!--teleport start--><!--teleport end--><!--teleport start--><!--teleport end--><!--teleport start--><!--teleport end--></div></div></div></div></div></div><!----></div></div></div></div></div></div></div></div><div class="home-section-bg discover-section" data-cy="discover-section-eef1ba1f-62cb-4b12-a345-27ad2ea718a5" data-v-e2e1fb60="" data-v-357215f1=""><div class="generic-section twh-container" data-v-e2e1fb60=""><div class="max-w-centered" data-v-e2e1fb60=""><div class="generic-section__top-heading" data-cy="generic-section__top-heading" data-v-e2e1fb60=""></div><div class="generic-section__title-container" data-v-e2e1fb60=""><div class="generic-section__title" data-cy="generic-section__title" data-v-e2e1fb60=""></div><div data-v-e2e1fb60=""><!----></div></div><div data-v-357215f1=""><div class="flex gap-4" data-v-357215f1=""><div data-v-357215f1=""><div class="discover-section__title" data-cy="discover-section-eef1ba1f-62cb-4b12-a345-27ad2ea718a5-title" data-v-357215f1="">All New in SketchUp 2024:</div><div class="discover-section__description" data-cy="discover-section-eef1ba1f-62cb-4b12-a345-27ad2ea718a5-desc" data-v-357215f1="">Experience Eye-popping Realism with Ambient Occlusion</div></div><div class="discover-section__view-more" data-cy="discover-section-eef1ba1f-62cb-4b12-a345-27ad2ea718a5-vm" data-v-357215f1="">View more</div></div><div class="grid-content pt-6" data-v-357215f1=""><div data-v-357215f1=""><div class="wh-product-card" data-v-6ecddf3a="" data-v-357215f1=""><div class="wh-card-wrapper" data-v-6ecddf3a=""><div class="p-card p-component wh-card"><div class="p-card-header"><a href="https://embed-3dwarehouse.sketchup.com/model/dd70197d65381eef4c62bee40dcdc539/ECOKITCHEN-1" class="" data-cy="product-card-header-wrapper" data-v-6ecddf3a=""><div class="a-card-header" data-cy="a-card-header" data-v-68dc7973="" data-v-6ecddf3a=""><div class="relative w-full h-0 pt-[calc(50%+0.625rem)] cursor-pointer" data-v-68dc7973=""><div class="v-responsive v-img v-img--booting a-card-header__image w-full" data-cy="a-card-header-image" size="48" data-v-68dc7973=""><div class="v-responsive__sizer"></div><!----><!----><!----><!----><!----><!----></div></div><div class="a-card-header__chips" data-v-68dc7973=""><div class="chip" data-cy="a-card-chip-product" data-v-68dc7973=""><span class="p-tag p-component bg-blue-400" data-cy="card-header__chip_product"><!----><span class="p-tag-value">Product</span></span><!----></div><div class="chip cursor-pointer" data-cy="a-card-chip-certified" data-v-68dc7973=""><span class="p-tag p-component bg-blue-500" data-cy="card-header__chip_certified"><!----><span class="p-tag-value">Certified</span></span><!--teleport start--><!--teleport end--></div></div></div></a></div><div class="p-card-body"><!----><!----><div class="p-card-content"><div class="a-card-content" data-v-9f1972ce="" data-v-6ecddf3a=""><div class="a-card-content__col flex flex-col" data-v-9f1972ce=""><div class="a-card-content__title" data-v-9f1972ce=""><!----><a href="https://embed-3dwarehouse.sketchup.com/model/dd70197d65381eef4c62bee40dcdc539/ECOKITCHEN-1" class="a-card-content__title-link" data-cy="a-card-content__title-link" data-v-9f1972ce="">ECOKITCHEN #1</a></div><div class="a-card-content__info" data-v-9f1972ce=""><div class="a-card-content__product-info" data-v-9f1972ce=""><i class="wh wh-file-size" data-cy="a-card-content__wh-file-size" data-v-9f1972ce=""></i><span class="mr-4" data-cy="a-card-content__product-info--file-size" data-v-9f1972ce="">2.8 MB</span><i class="wh wh-polygoncount" data-cy="a-card-content__wh-polygoncount" data-v-9f1972ce=""></i><span data-cy="a-card-content__product-info--polygon-count" data-v-9f1972ce="">18,301</span></div><!----><!----></div></div></div></div><div class="p-card-footer"><div class="a-card-footer" data-v-8b7aedcc="" data-v-6ecddf3a=""><div class="footer-item-left" data-v-8b7aedcc=""><a href="https://embed-3dwarehouse.sketchup.com/org/f9b2af3c-7beb-4238-9e69-0f8ed60ffe6f/Panda-Kitchen-bath" class="a-card-footer__user-container cursor-pointer" data-cy="a-card-footer-user-container" data-v-8b7aedcc=""><img class="hidden" src="./temp-thumbnail-261886971" data-cy="wh-avatar" data-v-88bf57ed=""><div class="p-avatar p-component p-avatar-image p-avatar-circle avatar avatar-16" type="org" data-cy="avatar__image" data-v-88bf57ed=""><img src="./temp-thumbnail-261886971"></div><div class="a-card-footer__name" data-cy="a-card-footer__name" title="Panda Kitchen &amp; bath" data-v-8b7aedcc="">Panda Kitchen &amp; bath</div></a></div><div class="a-card-footer__icons footer-item-right" data-v-8b7aedcc=""><i class="wh wh-material a-card-footer__icon py-[0.125rem]" data-cy="a-card-footer__icon-wh-material" data-v-8b7aedcc=""></i><div class="w-full" data-v-4b4a2662="" data-v-8b7aedcc=""><button class="btn primary-btn icon" hover="true" data-cy="download-button-dd70197d65381eef4c62bee40dcdc539" data-v-4b4a2662=""><i data-cy="download-icon" class="wh wh-download icon" data-v-4b4a2662=""></i></button><!--teleport start--><!--teleport end--><!--teleport start--><!--teleport end--><!--teleport start--><!--teleport end--></div></div></div></div></div></div><!----></div></div></div><div data-v-357215f1=""><div class="wh-product-card" data-v-6ecddf3a="" data-v-357215f1=""><div class="wh-card-wrapper" data-v-6ecddf3a=""><div class="p-card p-component wh-card"><div class="p-card-header"><a href="https://embed-3dwarehouse.sketchup.com/model/82bfb9ba7aea5e0244295bb298d2c3f5/Escorredor-de-Pratos" class="" data-cy="product-card-header-wrapper" data-v-6ecddf3a=""><div class="a-card-header" data-cy="a-card-header" data-v-68dc7973="" data-v-6ecddf3a=""><div class="relative w-full h-0 pt-[calc(50%+0.625rem)] cursor-pointer" data-v-68dc7973=""><div class="v-responsive v-img v-img--booting a-card-header__image w-full" data-cy="a-card-header-image" size="48" data-v-68dc7973=""><div class="v-responsive__sizer"></div><!----><!----><!----><!----><!----><!----></div></div><div class="a-card-header__chips" data-v-68dc7973=""></div></div></a></div><div class="p-card-body"><!----><!----><div class="p-card-content"><div class="a-card-content" data-v-9f1972ce="" data-v-6ecddf3a=""><div class="a-card-content__col flex flex-col" data-v-9f1972ce=""><div class="a-card-content__title" data-v-9f1972ce=""><!----><a href="https://embed-3dwarehouse.sketchup.com/model/82bfb9ba7aea5e0244295bb298d2c3f5/Escorredor-de-Pratos" class="a-card-content__title-link" data-cy="a-card-content__title-link" data-v-9f1972ce="">Escorredor de Pratos</a></div><div class="a-card-content__info" data-v-9f1972ce=""><div class="a-card-content__product-info" data-v-9f1972ce=""><i class="wh wh-file-size" data-cy="a-card-content__wh-file-size" data-v-9f1972ce=""></i><span class="mr-4" data-cy="a-card-content__product-info--file-size" data-v-9f1972ce="">1.5 MB</span><i class="wh wh-polygoncount" data-cy="a-card-content__wh-polygoncount" data-v-9f1972ce=""></i><span data-cy="a-card-content__product-info--polygon-count" data-v-9f1972ce="">108,730</span></div><!----><!----></div></div></div></div><div class="p-card-footer"><div class="a-card-footer" data-v-8b7aedcc="" data-v-6ecddf3a=""><div class="footer-item-left" data-v-8b7aedcc=""><a href="https://embed-3dwarehouse.sketchup.com/user/1807908424481667707212303/Andeciuala-N" class="a-card-footer__user-container cursor-pointer" data-cy="a-card-footer-user-container" data-v-8b7aedcc=""><img class="hidden" src="./photo.jpg" data-cy="wh-avatar" data-v-88bf57ed=""><div class="p-avatar p-component p-avatar-image p-avatar-circle avatar avatar-16" type="user" data-cy="avatar__image" data-v-88bf57ed=""><img src="./photo.jpg"></div><div class="a-card-footer__name" data-cy="a-card-footer__name" title="Andeciuala N." data-v-8b7aedcc="">Andeciuala N.</div></a></div><div class="a-card-footer__icons footer-item-right" data-v-8b7aedcc=""><i class="wh wh-material a-card-footer__icon py-[0.125rem]" data-cy="a-card-footer__icon-wh-material" data-v-8b7aedcc=""></i><div class="w-full" data-v-4b4a2662="" data-v-8b7aedcc=""><button class="btn primary-btn icon" hover="true" data-cy="download-button-82bfb9ba7aea5e0244295bb298d2c3f5" data-v-4b4a2662=""><i data-cy="download-icon" class="wh wh-download icon" data-v-4b4a2662=""></i></button><!--teleport start--><!--teleport end--><!--teleport start--><!--teleport end--><!--teleport start--><!--teleport end--></div></div></div></div></div></div><!----></div></div></div><div data-v-357215f1=""><div class="wh-product-card" data-v-6ecddf3a="" data-v-357215f1=""><div class="wh-card-wrapper" data-v-6ecddf3a=""><div class="p-card p-component wh-card"><div class="p-card-header"><a href="https://embed-3dwarehouse.sketchup.com/model/279c5cba894bd3763a0b87bccdc9e658/John-Bonham-Five-Piece-Ludwig-Blue-Onyx-Drum-Kit" class="" data-cy="product-card-header-wrapper" data-v-6ecddf3a=""><div class="a-card-header" data-cy="a-card-header" data-v-68dc7973="" data-v-6ecddf3a=""><div class="relative w-full h-0 pt-[calc(50%+0.625rem)] cursor-pointer" data-v-68dc7973=""><div class="v-responsive v-img v-img--booting a-card-header__image w-full" data-cy="a-card-header-image" size="48" data-v-68dc7973=""><div class="v-responsive__sizer"></div><!----><!----><!----><!----><!----><!----></div></div><div class="a-card-header__chips" data-v-68dc7973=""></div></div></a></div><div class="p-card-body"><!----><!----><div class="p-card-content"><div class="a-card-content" data-v-9f1972ce="" data-v-6ecddf3a=""><div class="a-card-content__col flex flex-col" data-v-9f1972ce=""><div class="a-card-content__title" data-v-9f1972ce=""><!----><a href="https://embed-3dwarehouse.sketchup.com/model/279c5cba894bd3763a0b87bccdc9e658/John-Bonham-Five-Piece-Ludwig-Blue-Onyx-Drum-Kit" class="a-card-content__title-link" data-cy="a-card-content__title-link" data-v-9f1972ce="">John Bonham Five-Piece Ludwig Blue Onyx Drum Kit</a></div><div class="a-card-content__info" data-v-9f1972ce=""><div class="a-card-content__product-info" data-v-9f1972ce=""><i class="wh wh-file-size" data-cy="a-card-content__wh-file-size" data-v-9f1972ce=""></i><span class="mr-4" data-cy="a-card-content__product-info--file-size" data-v-9f1972ce="">3.3 MB</span><i class="wh wh-polygoncount" data-cy="a-card-content__wh-polygoncount" data-v-9f1972ce=""></i><span data-cy="a-card-content__product-info--polygon-count" data-v-9f1972ce="">54,712</span></div><!----><!----></div></div></div></div><div class="p-card-footer"><div class="a-card-footer" data-v-8b7aedcc="" data-v-6ecddf3a=""><div class="footer-item-left" data-v-8b7aedcc=""><a href="https://embed-3dwarehouse.sketchup.com/user/0473151667492361466651628/Goldie" class="a-card-footer__user-container cursor-pointer" data-cy="a-card-footer-user-container" data-v-8b7aedcc=""><!----><div class="p-avatar p-component p-avatar-circle avatar avatar-16" data-cy="avatar__icon" data-v-88bf57ed=""><span class="p-avatar-icon wh wh-user"></span></div><div class="a-card-footer__name" data-cy="a-card-footer__name" title="Goldie" data-v-8b7aedcc="">Goldie</div></a></div><div class="a-card-footer__icons footer-item-right" data-v-8b7aedcc=""><i class="wh wh-material a-card-footer__icon py-[0.125rem]" data-cy="a-card-footer__icon-wh-material" data-v-8b7aedcc=""></i><div class="w-full" data-v-4b4a2662="" data-v-8b7aedcc=""><button class="btn primary-btn icon" hover="true" data-cy="download-button-279c5cba894bd3763a0b87bccdc9e658" data-v-4b4a2662=""><i data-cy="download-icon" class="wh wh-download icon" data-v-4b4a2662=""></i></button><!--teleport start--><!--teleport end--><!--teleport start--><!--teleport end--><!--teleport start--><!--teleport end--></div></div></div></div></div></div><!----></div></div></div><div data-v-357215f1=""><div class="wh-product-card" data-v-6ecddf3a="" data-v-357215f1=""><div class="wh-card-wrapper" data-v-6ecddf3a=""><div class="p-card p-component wh-card"><div class="p-card-header"><a href="https://embed-3dwarehouse.sketchup.com/model/e4252951-14c5-4b52-befe-8bbe6a2d4df8/Mid-Century-Modern-Hillside-Home" class="" data-cy="product-card-header-wrapper" data-v-6ecddf3a=""><div class="a-card-header" data-cy="a-card-header" data-v-68dc7973="" data-v-6ecddf3a=""><div class="relative w-full h-0 pt-[calc(50%+0.625rem)] cursor-pointer" data-v-68dc7973=""><div class="v-responsive v-img v-img--booting a-card-header__image w-full" data-cy="a-card-header-image" size="48" data-v-68dc7973=""><div class="v-responsive__sizer"></div><!----><!----><!----><!----><!----><!----></div></div><div class="a-card-header__chips" data-v-68dc7973=""></div></div></a></div><div class="p-card-body"><!----><!----><div class="p-card-content"><div class="a-card-content" data-v-9f1972ce="" data-v-6ecddf3a=""><div class="a-card-content__col flex flex-col" data-v-9f1972ce=""><div class="a-card-content__title" data-v-9f1972ce=""><!----><a href="https://embed-3dwarehouse.sketchup.com/model/e4252951-14c5-4b52-befe-8bbe6a2d4df8/Mid-Century-Modern-Hillside-Home" class="a-card-content__title-link" data-cy="a-card-content__title-link" data-v-9f1972ce="">Mid Century Modern Hillside Home</a></div><div class="a-card-content__info" data-v-9f1972ce=""><div class="a-card-content__product-info" data-v-9f1972ce=""><i class="wh wh-file-size" data-cy="a-card-content__wh-file-size" data-v-9f1972ce=""></i><span class="mr-4" data-cy="a-card-content__product-info--file-size" data-v-9f1972ce="">61 MB</span><i class="wh wh-polygoncount" data-cy="a-card-content__wh-polygoncount" data-v-9f1972ce=""></i><span data-cy="a-card-content__product-info--polygon-count" data-v-9f1972ce="">402,701</span></div><!----><!----></div></div></div></div><div class="p-card-footer"><div class="a-card-footer" data-v-8b7aedcc="" data-v-6ecddf3a=""><div class="footer-item-left" data-v-8b7aedcc=""><a href="https://embed-3dwarehouse.sketchup.com/user/1704a484-7142-4767-9568-d6241506bf42/Gavin-S" class="a-card-footer__user-container cursor-pointer" data-cy="a-card-footer-user-container" data-v-8b7aedcc=""><img class="hidden" src="./custom(2).jpeg" data-cy="wh-avatar" data-v-88bf57ed=""><div class="p-avatar p-component p-avatar-image p-avatar-circle avatar avatar-16" type="user" data-cy="avatar__image" data-v-88bf57ed=""><img src="./custom(2).jpeg"></div><div class="a-card-footer__name" data-cy="a-card-footer__name" title="Gavin S." data-v-8b7aedcc="">Gavin S.</div></a></div><div class="a-card-footer__icons footer-item-right" data-v-8b7aedcc=""><i class="wh wh-material a-card-footer__icon py-[0.125rem]" data-cy="a-card-footer__icon-wh-material" data-v-8b7aedcc=""></i><div class="w-full" data-v-4b4a2662="" data-v-8b7aedcc=""><button class="btn primary-btn icon" hover="true" data-cy="download-button-e4252951-14c5-4b52-befe-8bbe6a2d4df8" data-v-4b4a2662=""><i data-cy="download-icon" class="wh wh-download icon" data-v-4b4a2662=""></i></button><!--teleport start--><!--teleport end--><!--teleport start--><!--teleport end--><!--teleport start--><!--teleport end--></div></div></div></div></div></div><!----></div></div></div><div data-v-357215f1=""><div class="wh-product-card" data-v-6ecddf3a="" data-v-357215f1=""><div class="wh-card-wrapper" data-v-6ecddf3a=""><div class="p-card p-component wh-card"><div class="p-card-header"><a href="https://embed-3dwarehouse.sketchup.com/model/3f6c129cf74e2e02615fe02208d2ec7d/Garden-Restaurant" class="" data-cy="product-card-header-wrapper" data-v-6ecddf3a=""><div class="a-card-header" data-cy="a-card-header" data-v-68dc7973="" data-v-6ecddf3a=""><div class="relative w-full h-0 pt-[calc(50%+0.625rem)] cursor-pointer" data-v-68dc7973=""><div class="v-responsive v-img v-img--booting a-card-header__image w-full" data-cy="a-card-header-image" size="48" data-v-68dc7973=""><div class="v-responsive__sizer"></div><!----><!----><!----><!----><!----><!----></div></div><div class="a-card-header__chips" data-v-68dc7973=""></div></div></a></div><div class="p-card-body"><!----><!----><div class="p-card-content"><div class="a-card-content" data-v-9f1972ce="" data-v-6ecddf3a=""><div class="a-card-content__col flex flex-col" data-v-9f1972ce=""><div class="a-card-content__title" data-v-9f1972ce=""><!----><a href="https://embed-3dwarehouse.sketchup.com/model/3f6c129cf74e2e02615fe02208d2ec7d/Garden-Restaurant" class="a-card-content__title-link" data-cy="a-card-content__title-link" data-v-9f1972ce="">Garden Restaurant</a></div><div class="a-card-content__info" data-v-9f1972ce=""><div class="a-card-content__product-info" data-v-9f1972ce=""><i class="wh wh-file-size" data-cy="a-card-content__wh-file-size" data-v-9f1972ce=""></i><span class="mr-4" data-cy="a-card-content__product-info--file-size" data-v-9f1972ce="">3 MB</span><i class="wh wh-polygoncount" data-cy="a-card-content__wh-polygoncount" data-v-9f1972ce=""></i><span data-cy="a-card-content__product-info--polygon-count" data-v-9f1972ce="">90,147</span></div><!----><!----></div></div></div></div><div class="p-card-footer"><div class="a-card-footer" data-v-8b7aedcc="" data-v-6ecddf3a=""><div class="footer-item-left" data-v-8b7aedcc=""><a href="https://embed-3dwarehouse.sketchup.com/user/0353547847960798326814574/Rumei-C" class="a-card-footer__user-container cursor-pointer" data-cy="a-card-footer-user-container" data-v-8b7aedcc=""><img class="hidden" src="./photo(1).jpg" data-cy="wh-avatar" data-v-88bf57ed=""><div class="p-avatar p-component p-avatar-image p-avatar-circle avatar avatar-16" type="user" data-cy="avatar__image" data-v-88bf57ed=""><img src="./photo(1).jpg"></div><div class="a-card-footer__name" data-cy="a-card-footer__name" title="Rumei C." data-v-8b7aedcc="">Rumei C.</div></a></div><div class="a-card-footer__icons footer-item-right" data-v-8b7aedcc=""><i class="wh wh-material a-card-footer__icon py-[0.125rem]" data-cy="a-card-footer__icon-wh-material" data-v-8b7aedcc=""></i><div class="w-full" data-v-4b4a2662="" data-v-8b7aedcc=""><button class="btn primary-btn icon" hover="true" data-cy="download-button-3f6c129cf74e2e02615fe02208d2ec7d" data-v-4b4a2662=""><i data-cy="download-icon" class="wh wh-download icon" data-v-4b4a2662=""></i></button><!--teleport start--><!--teleport end--><!--teleport start--><!--teleport end--><!--teleport start--><!--teleport end--></div></div></div></div></div></div><!----></div></div></div><div data-v-357215f1=""><div class="wh-product-card" data-v-6ecddf3a="" data-v-357215f1=""><div class="wh-card-wrapper" data-v-6ecddf3a=""><div class="p-card p-component wh-card"><div class="p-card-header"><a href="https://embed-3dwarehouse.sketchup.com/model/9beb3eda-5e3a-49e5-b0ad-8084fa995bb2/Great-Hall-Wooden-Ceiling" class="" data-cy="product-card-header-wrapper" data-v-6ecddf3a=""><div class="a-card-header" data-cy="a-card-header" data-v-68dc7973="" data-v-6ecddf3a=""><div class="relative w-full h-0 pt-[calc(50%+0.625rem)] cursor-pointer" data-v-68dc7973=""><div class="v-responsive v-img v-img--booting a-card-header__image w-full" data-cy="a-card-header-image" size="48" data-v-68dc7973=""><div class="v-responsive__sizer"></div><!----><!----><!----><!----><!----><!----></div></div><div class="a-card-header__chips" data-v-68dc7973=""></div></div></a></div><div class="p-card-body"><!----><!----><div class="p-card-content"><div class="a-card-content" data-v-9f1972ce="" data-v-6ecddf3a=""><div class="a-card-content__col flex flex-col" data-v-9f1972ce=""><div class="a-card-content__title" data-v-9f1972ce=""><!----><a href="https://embed-3dwarehouse.sketchup.com/model/9beb3eda-5e3a-49e5-b0ad-8084fa995bb2/Great-Hall-Wooden-Ceiling" class="a-card-content__title-link" data-cy="a-card-content__title-link" data-v-9f1972ce="">Great Hall Wooden Ceiling</a></div><div class="a-card-content__info" data-v-9f1972ce=""><div class="a-card-content__product-info" data-v-9f1972ce=""><i class="wh wh-file-size" data-cy="a-card-content__wh-file-size" data-v-9f1972ce=""></i><span class="mr-4" data-cy="a-card-content__product-info--file-size" data-v-9f1972ce="">3.1 MB</span><i class="wh wh-polygoncount" data-cy="a-card-content__wh-polygoncount" data-v-9f1972ce=""></i><span data-cy="a-card-content__product-info--polygon-count" data-v-9f1972ce="">43,664</span></div><!----><!----></div></div></div></div><div class="p-card-footer"><div class="a-card-footer" data-v-8b7aedcc="" data-v-6ecddf3a=""><div class="footer-item-left" data-v-8b7aedcc=""><a href="https://embed-3dwarehouse.sketchup.com/user/u369bba45-569a-479e-beb7-1f96e0f60078/sketchinbane" class="a-card-footer__user-container cursor-pointer" data-cy="a-card-footer-user-container" data-v-8b7aedcc=""><img class="hidden" src="./adam+jug.jpg" data-cy="wh-avatar" data-v-88bf57ed=""><div class="p-avatar p-component p-avatar-image p-avatar-circle avatar avatar-16" type="user" data-cy="avatar__image" data-v-88bf57ed=""><img src="./adam+jug.jpg"></div><div class="a-card-footer__name" data-cy="a-card-footer__name" title="sketchinbane" data-v-8b7aedcc="">sketchinbane</div></a></div><div class="a-card-footer__icons footer-item-right" data-v-8b7aedcc=""><i class="wh wh-material a-card-footer__icon py-[0.125rem]" data-cy="a-card-footer__icon-wh-material" data-v-8b7aedcc=""></i><div class="w-full" data-v-4b4a2662="" data-v-8b7aedcc=""><button class="btn primary-btn icon" hover="true" data-cy="download-button-9beb3eda-5e3a-49e5-b0ad-8084fa995bb2" data-v-4b4a2662=""><i data-cy="download-icon" class="wh wh-download icon" data-v-4b4a2662=""></i></button><!--teleport start--><!--teleport end--><!--teleport start--><!--teleport end--><!--teleport start--><!--teleport end--></div></div></div></div></div></div><!----></div></div></div><div data-v-357215f1=""><div class="wh-product-card" data-v-6ecddf3a="" data-v-357215f1=""><div class="wh-card-wrapper" data-v-6ecddf3a=""><div class="p-card p-component wh-card"><div class="p-card-header"><a href="https://embed-3dwarehouse.sketchup.com/model/80901ed8571e0fa3bd5bed2701d5593/2-Car-Garage" class="" data-cy="product-card-header-wrapper" data-v-6ecddf3a=""><div class="a-card-header" data-cy="a-card-header" data-v-68dc7973="" data-v-6ecddf3a=""><div class="relative w-full h-0 pt-[calc(50%+0.625rem)] cursor-pointer" data-v-68dc7973=""><div class="v-responsive v-img v-img--booting a-card-header__image w-full" data-cy="a-card-header-image" size="48" data-v-68dc7973=""><div class="v-responsive__sizer"></div><!----><!----><!----><!----><!----><!----></div></div><div class="a-card-header__chips" data-v-68dc7973=""></div></div></a></div><div class="p-card-body"><!----><!----><div class="p-card-content"><div class="a-card-content" data-v-9f1972ce="" data-v-6ecddf3a=""><div class="a-card-content__col flex flex-col" data-v-9f1972ce=""><div class="a-card-content__title" data-v-9f1972ce=""><!----><a href="https://embed-3dwarehouse.sketchup.com/model/80901ed8571e0fa3bd5bed2701d5593/2-Car-Garage" class="a-card-content__title-link" data-cy="a-card-content__title-link" data-v-9f1972ce="">2 Car Garage</a></div><div class="a-card-content__info" data-v-9f1972ce=""><div class="a-card-content__product-info" data-v-9f1972ce=""><i class="wh wh-file-size" data-cy="a-card-content__wh-file-size" data-v-9f1972ce=""></i><span class="mr-4" data-cy="a-card-content__product-info--file-size" data-v-9f1972ce="">2.3 MB</span><i class="wh wh-polygoncount" data-cy="a-card-content__wh-polygoncount" data-v-9f1972ce=""></i><span data-cy="a-card-content__product-info--polygon-count" data-v-9f1972ce="">21,174</span></div><!----><!----></div></div></div></div><div class="p-card-footer"><div class="a-card-footer" data-v-8b7aedcc="" data-v-6ecddf3a=""><div class="footer-item-left" data-v-8b7aedcc=""><a href="https://embed-3dwarehouse.sketchup.com/user/1768159215499965348639290/pixelmonkey-3" class="a-card-footer__user-container cursor-pointer" data-cy="a-card-footer-user-container" data-v-8b7aedcc=""><!----><div class="p-avatar p-component p-avatar-circle avatar avatar-16" data-cy="avatar__icon" data-v-88bf57ed=""><span class="p-avatar-icon wh wh-user"></span></div><div class="a-card-footer__name" data-cy="a-card-footer__name" title="pixelmonkey 3." data-v-8b7aedcc="">pixelmonkey 3.</div></a></div><div class="a-card-footer__icons footer-item-right" data-v-8b7aedcc=""><i class="wh wh-material a-card-footer__icon py-[0.125rem]" data-cy="a-card-footer__icon-wh-material" data-v-8b7aedcc=""></i><div class="w-full" data-v-4b4a2662="" data-v-8b7aedcc=""><button class="btn primary-btn icon" hover="true" data-cy="download-button-80901ed8571e0fa3bd5bed2701d5593" data-v-4b4a2662=""><i data-cy="download-icon" class="wh wh-download icon" data-v-4b4a2662=""></i></button><!--teleport start--><!--teleport end--><!--teleport start--><!--teleport end--><!--teleport start--><!--teleport end--></div></div></div></div></div></div><!----></div></div></div><div data-v-357215f1=""><div class="wh-product-card" data-v-6ecddf3a="" data-v-357215f1=""><div class="wh-card-wrapper" data-v-6ecddf3a=""><div class="p-card p-component wh-card"><div class="p-card-header"><a href="https://embed-3dwarehouse.sketchup.com/model/3a4fd466043eafca57830ca3639460/JIBOIApergolado" class="" data-cy="product-card-header-wrapper" data-v-6ecddf3a=""><div class="a-card-header" data-cy="a-card-header" data-v-68dc7973="" data-v-6ecddf3a=""><div class="relative w-full h-0 pt-[calc(50%+0.625rem)] cursor-pointer" data-v-68dc7973=""><div class="v-responsive v-img v-img--booting a-card-header__image w-full" data-cy="a-card-header-image" size="48" data-v-68dc7973=""><div class="v-responsive__sizer"></div><!----><!----><!----><!----><!----><!----></div></div><div class="a-card-header__chips" data-v-68dc7973=""></div></div></a></div><div class="p-card-body"><!----><!----><div class="p-card-content"><div class="a-card-content" data-v-9f1972ce="" data-v-6ecddf3a=""><div class="a-card-content__col flex flex-col" data-v-9f1972ce=""><div class="a-card-content__title" data-v-9f1972ce=""><!----><a href="https://embed-3dwarehouse.sketchup.com/model/3a4fd466043eafca57830ca3639460/JIBOIApergolado" class="a-card-content__title-link" data-cy="a-card-content__title-link" data-v-9f1972ce="">JIBOIA_pergolado</a></div><div class="a-card-content__info" data-v-9f1972ce=""><div class="a-card-content__product-info" data-v-9f1972ce=""><i class="wh wh-file-size" data-cy="a-card-content__wh-file-size" data-v-9f1972ce=""></i><span class="mr-4" data-cy="a-card-content__product-info--file-size" data-v-9f1972ce="">4.5 MB</span><i class="wh wh-polygoncount" data-cy="a-card-content__wh-polygoncount" data-v-9f1972ce=""></i><span data-cy="a-card-content__product-info--polygon-count" data-v-9f1972ce="">24,606</span></div><!----><!----></div></div></div></div><div class="p-card-footer"><div class="a-card-footer" data-v-8b7aedcc="" data-v-6ecddf3a=""><div class="footer-item-left" data-v-8b7aedcc=""><a href="https://embed-3dwarehouse.sketchup.com/user/0215965672352559154054692/Mateus-V" class="a-card-footer__user-container cursor-pointer" data-cy="a-card-footer-user-container" data-v-8b7aedcc=""><img class="hidden" src="./photo(2).jpg" data-cy="wh-avatar" data-v-88bf57ed=""><div class="p-avatar p-component p-avatar-image p-avatar-circle avatar avatar-16" type="user" data-cy="avatar__image" data-v-88bf57ed=""><img src="./photo(2).jpg"></div><div class="a-card-footer__name" data-cy="a-card-footer__name" title="Mateus V." data-v-8b7aedcc="">Mateus V.</div></a></div><div class="a-card-footer__icons footer-item-right" data-v-8b7aedcc=""><i class="wh wh-material a-card-footer__icon py-[0.125rem]" data-cy="a-card-footer__icon-wh-material" data-v-8b7aedcc=""></i><div class="w-full" data-v-4b4a2662="" data-v-8b7aedcc=""><button class="btn primary-btn icon" hover="true" data-cy="download-button-3a4fd466043eafca57830ca3639460" data-v-4b4a2662=""><i data-cy="download-icon" class="wh wh-download icon" data-v-4b4a2662=""></i></button><!--teleport start--><!--teleport end--><!--teleport start--><!--teleport end--><!--teleport start--><!--teleport end--></div></div></div></div></div></div><!----></div></div></div></div></div></div></div></div></div><div class="p-tabview-panel" role="tabpanel" aria-labelledby="pv_id_6_1_header_action" style="display: none;"><div class="home-section-bg" contentcomponent="[object Object]" contentdata="[object Object]" data-v-07c34430="" data-v-c60ce949=""><div class="my-3dw-section twh-container" data-v-07c34430=""><div class="max-w-centered" data-v-07c34430=""><!----><div class="text-[2.5rem] font-semibold max-w-[65.3rem] pb-6" data-v-a70a1cc0="" data-v-c60ce949="">Start learning the ins and outs of 3D Warehouse to build your homepage.</div></div></div></div><!----><!----><div class="home-section-bg" data-v-e2e1fb60="" data-v-c60ce949=""><div class="generic-section twh-container" data-v-e2e1fb60=""><div class="max-w-centered" data-v-e2e1fb60=""><div class="generic-section__top-heading" data-cy="generic-section__top-heading" data-v-e2e1fb60=""></div><div class="generic-section__title-container" data-v-e2e1fb60=""><div class="generic-section__title" data-cy="generic-section__title" data-v-e2e1fb60=""></div><div data-v-e2e1fb60=""><!----></div></div><div class="feature-card" data-cy="feature-card" data-v-6fd8fd5d="" data-v-c60ce949=""><div class="flex flex-col tablet:flex-row gap-6 align-center" data-v-6fd8fd5d=""><div class="v-responsive v-img feature-card__image tablet:ml-6 tablet:mr-0" data-cy="feature-card-image" data-v-6fd8fd5d=""><div class="v-responsive__sizer" style="padding-bottom: 56.2388%;"></div><img class="v-img__img v-img__img--contain" src="./featurecard-like-model_light.png" alt="" style=""><!----><!----><!----><!----><!----></div><div class="feature-card__main-content" data-v-6fd8fd5d=""><div class="mb-2" data-v-6fd8fd5d=""><!----><h4 class="feature-card__header-bar-text" data-cy="feature-card-header-bar-text" data-v-6fd8fd5d="">Your saved content</h4></div><div class="feature-card__title" data-cy="feature-card-title" data-v-6fd8fd5d="">Show your favorite models some love.</div><h3 class="feature-card__description" data-cy="feature-card-description" data-v-6fd8fd5d="">Add a "Like" to your favorite products, models, collections and catalogs to show the author some (virtual) love.</h3><div class="feature-card__footer" data-v-6fd8fd5d=""><!----><button class="btn-lightup btn-feature-card" data-cy="feature-card-footer-button" data-v-6fd8fd5d="">Search For Content</button></div></div></div></div></div></div></div><div class="home-section-bg" data-v-e2e1fb60="" data-v-c60ce949=""><div class="generic-section twh-container" data-v-e2e1fb60=""><div class="max-w-centered" data-v-e2e1fb60=""><div class="generic-section__top-heading" data-cy="generic-section__top-heading" data-v-e2e1fb60=""></div><div class="generic-section__title-container" data-v-e2e1fb60=""><div class="generic-section__title" data-cy="generic-section__title" data-v-e2e1fb60=""></div><div data-v-e2e1fb60=""><!----></div></div><div class="feature-card" data-cy="feature-card" data-v-6fd8fd5d="" data-v-c60ce949=""><div class="flex flex-col tablet:flex-row gap-6 align-center" data-v-6fd8fd5d=""><div class="v-responsive v-img feature-card__image tablet:ml-6 tablet:mr-0" data-cy="feature-card-image" data-v-6fd8fd5d=""><div class="v-responsive__sizer" style="padding-bottom: 56.2388%;"></div><img class="v-img__img v-img__img--contain" src="./featurecard-upload-model_light.png" alt="" style=""><!----><!----><!----><!----><!----></div><div class="feature-card__main-content" data-v-6fd8fd5d=""><div class="mb-2" data-v-6fd8fd5d=""><!----><h4 class="feature-card__header-bar-text" data-cy="feature-card-header-bar-text" data-v-6fd8fd5d="">Your original content</h4></div><div class="feature-card__title" data-cy="feature-card-title" data-v-6fd8fd5d="">Upload your first model to the Warehouse</div><h3 class="feature-card__description" data-cy="feature-card-description" data-v-6fd8fd5d="">Show off your 3D creations for all of 3D Warehouse to see, celebrate, and use. All you need to do is upload them. Simple.</h3><div class="feature-card__footer" data-v-6fd8fd5d=""><!----><button class="btn-lightup btn-feature-card" data-cy="feature-card-footer-button" data-v-6fd8fd5d="">Upload A Model</button></div></div></div></div></div></div></div><div class="home-section-bg" data-v-e2e1fb60="" data-v-c60ce949=""><div class="generic-section twh-container" data-v-e2e1fb60=""><div class="max-w-centered" data-v-e2e1fb60=""><div class="generic-section__top-heading" data-cy="generic-section__top-heading" data-v-e2e1fb60=""></div><div class="generic-section__title-container" data-v-e2e1fb60=""><div class="generic-section__title" data-cy="generic-section__title" data-v-e2e1fb60=""></div><div data-v-e2e1fb60=""><!----></div></div><div class="feature-card" data-cy="feature-card" data-v-6fd8fd5d="" data-v-c60ce949=""><div class="flex flex-col tablet:flex-row gap-6 align-center" data-v-6fd8fd5d=""><div class="v-responsive v-img feature-card__image tablet:ml-6 tablet:mr-0" data-cy="feature-card-image" data-v-6fd8fd5d=""><div class="v-responsive__sizer" style="padding-bottom: 56.2388%;"></div><img class="v-img__img v-img__img--contain" src="./featurecard-create-collection_light.png" alt="" style=""><!----><!----><!----><!----><!----></div><div class="feature-card__main-content" data-v-6fd8fd5d=""><div class="mb-2" data-v-6fd8fd5d=""><!----><h4 class="feature-card__header-bar-text" data-cy="feature-card-header-bar-text" data-v-6fd8fd5d="">Your saved content</h4></div><div class="feature-card__title" data-cy="feature-card-title" data-v-6fd8fd5d="">Start curating your first collection.</div><h3 class="feature-card__description" data-cy="feature-card-description" data-v-6fd8fd5d="">Find your favorite models with the click of a button by organizing them in a shiny new collection to use later.</h3><div class="feature-card__footer" data-v-6fd8fd5d=""><!----><button class="btn-lightup btn-feature-card" data-cy="feature-card-footer-button" data-v-6fd8fd5d="">Start A Collection</button></div></div></div></div></div></div></div><!--teleport start--><!--teleport end--></div></div></div></div></div><!--teleport start--><!--teleport end--></div></div><!----></div></div><!--teleport start--><!--teleport end--><!--teleport start--><!--teleport end--><!--teleport start--><!--teleport end--><!--teleport start--><!--teleport end--><!--teleport start--><!--teleport end--><!--teleport start--><!--teleport end--><!----><div id="tdw-callout" data-v-7a7a37b1=""></div></div>
+
+    <noscript>3DWarehouse requires Javascript to be enabled.</noscript>
+  
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function (event) {
+      document.getElementById('spinner').className = 'show-spinner';
+    });
+  </script>
+
+
+<script async="" src="./gtm.js.下载"></script><!----><!----><div class="p-toast p-component p-toast-bottom-right p-ripple-disabled"><div></div></div><!----><!----><!----><!----><script type="text/javascript" id="">window._6si=window._6si||[];window._6si.push(["enableEventTracking",!0]);window._6si.push(["setToken","12764fe3b9e1e45e67a72e15eab459ca"]);window._6si.push(["setEndpoint","b.6sc.co"]);(function(){var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src="//j.6sc.co/6si.min.js";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})();</script><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----></body></html>

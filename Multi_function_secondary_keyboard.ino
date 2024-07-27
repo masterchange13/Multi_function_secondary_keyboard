@@ -67,7 +67,7 @@ void functionKey(BleKeyboard bleKeyboard, int row, int col) {
     Serial.print("Key pressed: ");
     if (row == 0) {
         if (col == 0) {
-            keyMap23(bleKeyboard);
+            keyMap11(bleKeyboard);
         } else if (col == 1) {
             keyMap12(bleKeyboard);
         } else if (col == 2) {
