@@ -118,32 +118,38 @@ void keyMap32(BleKeyboard bleKeyboard) {
 }
 
 //machine browser
+// 音量+
 void keyMap33(BleKeyboard bleKeyboard)
 {
-    bleKeyboard.press(KEY_MEDIA_LOCAL_MACHINE_BROWSER);
-    delay(20);
-    bleKeyboard.release(KEY_MEDIA_LOCAL_MACHINE_BROWSER);
-    delay(20);
+//    bleKeyboard.press(KEY_MEDIA_LOCAL_MACHINE_BROWSER);
+//    delay(20);
+//    bleKeyboard.release(KEY_MEDIA_LOCAL_MACHINE_BROWSER);
+//    delay(20);
+
+    bleKeyboard.press(KEY_MEDIA_VOLUME_UP);
 }
 
 // edge browser
+// 音量-
 void keyMap34(BleKeyboard bleKeyboard)
 {
-    bleKeyboard.press(KEY_LEFT_GUI);
-    delay(20);
-    bleKeyboard.press(KEY_R);
-    delay(20);
-    bleKeyboard.release(KEY_LEFT_GUI);
-    bleKeyboard.release(KEY_R);
-    delay(20);
+//    bleKeyboard.press(KEY_LEFT_GUI);
+//    delay(20);
+//    bleKeyboard.press(KEY_R);
+//    delay(20);
+//    bleKeyboard.release(KEY_LEFT_GUI);
+//    bleKeyboard.release(KEY_R);
+//    delay(20);
+//
+//    bleKeyboard.print("msedge");
+//    delay(200);
+//
+//    bleKeyboard.press(KEY_RETURN);
+//    delay(20);
+//    bleKeyboard.release(KEY_RETURN);
+//    delay(20);
 
-    bleKeyboard.print("msedge");
-    delay(200);
-
-    bleKeyboard.press(KEY_RETURN);
-    delay(20);
-    bleKeyboard.release(KEY_RETURN);
-    delay(20);
+    bleKeyboard.press(KEY_MEDIA_VOLUME_DOWN);
 }
 
 // qq
@@ -194,10 +200,16 @@ void keyMap42(BleKeyboard bleKeyboard)
 
 void keyMap43(BleKeyboard bleKeyboard)
 {
-
+    bleKeyboard.press(KEY_MEDIA_PLAY_PAUSE);
+    delay(20);
+    bleKeyboard.release(KEY_MEDIA_PLAY_PAUSE);
+    delay(20);
 }
 
 void keyMap44(BleKeyboard bleKeyboard)
 {
-
+    bleKeyboard.press(KEY_PRTSC);
+    delay(20);
+    bleKeyboard.release(KEY_PRTSC);
+    delay(20);
 }
